@@ -1,0 +1,38 @@
+.Navigation{
+    height:56px;
+    width:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    background-color:black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 20px;
+    box-sizing: border-box;
+    z-index:90;
+}
+.Navigation nav{
+    height: 100%;
+    
+}
+.Navigation li{
+   
+    margin:10px 10px;
+    display: inline-flex;
+    left:0;
+    cursor: pointer;
+    width: auto;
+    align-items: center;
+    color:white;
+    height: 100%;
+    text-align: right;
+    border-bottom: 4px solid transparent;
+}
+.Navigationitem a:hover,
+.Navigationitem a:active,
+.Navigationitem a.active {
+    background-color: black;
+    border-bottom: 1px solid salmon;
+    color: white;
+}
