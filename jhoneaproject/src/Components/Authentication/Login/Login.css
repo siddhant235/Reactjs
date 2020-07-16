@@ -1,0 +1,33 @@
+.login {
+  
+  left: 20rem;
+ 
+  font-weight: 500;
+  
+  z-index: 9967;
+
+}
+.Button {
+  height: 40px;
+  line-height: 40px;
+  padding: 0 20px;
+  background-color: #0b1357;
+  color: #ffffff !important;
+  display: inline-block;
+  border-radius: 4px;
+position: relative;
+left:8rem;
+  border: 1px solid transparent;
+}
+.Button:hover {
+  background-color: #bb732e;
+  transition: all 0.4s ease-in-out;
+}
+.login input{
+   display:grid;
+   /* grid-template-columns: auto auto; */
+   left:5rem;
+   width: 300px;
+   margin-left: 2rem;
+  
+}

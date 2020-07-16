@@ -59,6 +59,7 @@ text-align: left;
  
 }
 
+
 .Rightitems i{
     margin: 0.5rem 0.5rem;
     color: #fff;
@@ -150,7 +151,14 @@ text-align: left;
     height:100%
   }
 }
-  
+  .dropdown1 p{
+    position: relative;
+    right:0.8rem;
+  }
+  .dropdown1 p:hover{
+    cursor: pointer;
+    color: #bb732e;
+  }
   /* Show the dropdown menu on hover */
   .dropdown1:hover .dropdown-content  {
     display: block;

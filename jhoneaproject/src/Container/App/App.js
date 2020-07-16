@@ -4,6 +4,8 @@ const Layout=React.lazy(()=>import('../../Components/Layout/Layout'))
 const Home=React.lazy(()=>import('../Home/Home'))
 const ProductDetail=React.lazy(()=>import('../ProductDetail/ProductDetail'))
 const CategoryList=React.lazy(()=>import('../CategoryList/CategoryList'))
+const Login=React.lazy(()=>import('../../Components/Authentication/Login/Login'))
+const Signup=React.lazy(()=>import('../../Components/Authentication/SignUp/Signup'))
 const MyCart=React.lazy(()=>import('../../Components/MyCart/MyCart'))
 class App extends Component {
   
@@ -19,6 +21,8 @@ class App extends Component {
         
           <Route path="/product-detail/:id/" exact component={ProductDetail}/>
           <Route path="/category-list/" exact component={CategoryList}/>
+          <Route path="/login/" exact component={Login}/>
+          <Route path="/Signup/" exact component={Signup}/>
           <Route Path="/user/mycart/" exact component={MyCart}/>
       </Switch>
       </Suspense>

@@ -1,9 +1,21 @@
-import React from 'react'
+import React,{Component} from 'react'
+import {Link} from 'react-router-dom'
+import Login from '../../Authentication/Login/Login'
 import user from '../../../assets/images/user-icon.png'
 import   './Navbar.css'
 import customerCare from '../../../assets/images/customer-care-icon.png'
-const Navbar=()=>{
-    
+class Navbar extends Component{
+    state={
+        showLogin:false,
+        showSignUp:false
+    }
+    login=()=>{
+        this.setState({
+            showLogin:true
+        })
+    }
+    render(){
+   
      return(
     <div className="Navbar">
          <div className="Leftitems">
@@ -14,15 +26,16 @@ const Navbar=()=>{
           
         <div className="Rightitems">
         <span className="dropdown1">
-            <a href="/default"> <img src={user} alt="User" className="user"/>Login<i className="fas fa-angle-down"></i></a>
+            <Link id="/login"> <img src={user} alt="User" className="user"/>Login<i className="fas fa-angle-down"></i></Link>
             <div className="dropdown-content">
 
-                <a href="/default">Login</a>
-                <a href="/default">Register</a>
+                <p onClick={this.login}>Login</p>
+               
+                <Link to="/Signup">Register</Link>
             </div>
            
             </span>
-            
+           
             <a href="#default"><i className="far fa-heart"></i>Wishlist</a>
             <a href="#default"><i className="far fa-bell"></i></a>
             <div className="icons">
@@ -30,8 +43,10 @@ const Navbar=()=>{
             </div>
            
         </div>
+        {this.state.showLogin&& <Login/>}
         </div>
        
      )
+}
 }
 export default Navbar;
