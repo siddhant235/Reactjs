@@ -1,0 +1,24 @@
+.Review-tab{
+    /* margin-left: 2rem;
+    line-height: 3; */
+    background-color: #ffff;
+  box-sizing: border-box;
+ padding:10px 10px;
+position: fixed;
+  height: auto;
+  width: auto;
+ 
+right:20rem;
+  position: absolute;
+  top: 55rem;
+}
+textarea
+{
+    height:6rem;
+    width:70rem;
+}
+.Review-tab h3,h4{
+    text-align: center;
+}
+
+ 

@@ -1,0 +1,166 @@
+.Footer {
+  display: flex;
+  flex-flow: row;
+text-decoration: none;
+  margin-bottom: 20px;
+  bottom: fixed;
+  margin-top: 10rem;
+}
+.Follow {
+  margin-left: 7rem;
+}
+
+.Follow h3 {
+  font-size: 2rem;
+
+  margin-left: 4rem;
+}
+.Follow ul {
+  display: flex;
+  flex-flow: row;
+}
+.Follow ul li {
+  margin: 0rem 0.8rem;
+  /* color: #fff; */
+
+  border: none;
+  box-shadow: none;
+  display: block;
+  font-size: 35px;
+  text-align: center;
+  width: 35px;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+}
+
+.fab {
+  padding: 5px;
+  font-size: 30px;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 100%;
+  text-decoration: none;
+}
+
+/* Add a hover effect if you want */
+.fab:hover {
+  opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+ 
+}
+.fa-facebook:hover {
+  background: #2e4473;
+  color: white;
+  text-decoration: none;
+}
+
+/* Twitter */
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+  text-decoration: none;
+}
+.fa-twitter:hover {
+  background: #07bcff;
+  color: white;
+  text-decoration: none;
+}
+.fa-instagram {
+  background: #0f537a;
+  color: white;
+  text-decoration: none;
+}
+.fa-instagram:hover {
+  background: #0f537a;
+  color: white;
+  text-decoration: none;
+}
+.fa-pinterest {
+  background: #cb2027;
+  color: white;
+  text-decoration: none;
+}
+.fa-pinterest:hover {
+  background: #9f191f;
+  color: white;
+  text-decoration: none;
+}
+.fa-snapchat {
+  background: #bb732e;
+  color: white;
+  text-decoration: none;
+}
+.fa-snapchat:hover {
+  background: #5d8801;
+  color: white;
+  text-decoration: none;
+}
+
+.Contactus {
+  margin: 0rem 12rem;
+  display: inline-block;
+}
+.Contactus h3 {
+  font-size: 2rem;
+  margin-left: 0rem 1rem;
+}
+.icon {
+  font-size: 30px;
+  display: flex;
+  flex-flow: row;
+}
+
+.Contactus a {
+  font-size: 1rem;
+  margin: 0rem 0.5rem;
+  list-style: none;
+  color: #777;
+  text-decoration: none;
+}
+.Contactus a:hover {
+  color: #bb732e;
+}
+.Contactus p {
+  display: flex;
+  font-size: 1rem;
+  flex-flow: column;
+  margin: 0rem 1rem;
+  text-decoration: none;
+  color: #777;
+}
+
+.Information h3 {
+  font-size: 2rem;
+
+  margin-left: 1rem;
+}
+.Information ul li {
+  display: block;
+  margin-top: 0.5rem;
+}
+.Information ul li a:hover {
+  color:#bb732e;
+}
+.Information ul li a {
+  margin-left: 0.01rem;
+  text-decoration: none;
+  color: #777;
+}
+.lower {
+  text-align: center;
+  color: #777;
+  font-size: 0.933rem;
+}
+.lower hr {
+  background-color: #bb732e;
+}

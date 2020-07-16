@@ -1,0 +1,114 @@
+.Categories img{
+    /* border:4px solid #ddd; */
+    /* border-radius: 50%; */
+    width:450px;
+    height:170px;
+}
+.Categories img:hover{
+    border:4px solid #bb732e;
+    transition: all 0.3s linear;
+    
+}
+.Upper1{
+    background: #e9e9e9;
+    position: relative;
+    left:10rem;
+    box-sizing: border-box;
+    width:80%;
+   
+    height:40px;
+}
+.Upper1 h3 {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 1em;
+    line-height: 1.5;
+    position: relative;
+    bottom:1rem;
+    margin-right: 100px;
+    background: #bb723e;
+    padding: 15px 25px 15px 10px;
+    position: relative;
+    display: inline-block;
+    z-index: 27;
+
+    border-radius: 0 5px 0 0;
+}
+.Upper1 h3:after {
+    border-bottom: 15px solid transparent;
+    border-left: 15px solid transparent;
+    border-top: 15px solid #a15721;
+    bottom: 0;
+    content: '';
+    left: -15px;
+    position: absolute;
+    z-index: 1;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    transform: translateY(100%);
+}
+.Upper1 h3:before {
+    background: #bb723e;
+    content: '';
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 15px;
+    z-index: 1;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+.Upper1 a{
+    text-decoration: none;
+    color: #a43d21;
+    position: relative;
+    left:53rem;
+    bottom: 10px;
+    transition:all 0.4s ease 0s;
+}
+.arrowl1{
+position:absolute;
+top:94.2rem;
+left:90rem;
+
+}
+.arrowl1:hover{
+    color:#bb732e;
+}
+.arrowr1{
+    position:absolute;
+    top:94.2rem;
+    left:92rem;
+}
+
+.arrowr1:hover{
+    color:#bb732e;
+}
+.Multi-Carousel1{
+    box-sizing: border-box;
+    width: 100%;
+    height:550px;
+    background-color: #f9f9f9;
+   
+    margin-top: 30px;
+}
+.MultiCarouselsimilar{
+width:80%;
+height:500px;
+margin-bottom: 5rem;
+background-color: #fff;
+margin-left: 10rem;
+
+}
+.individual p{
+    color:#777;
+    position: relative;
+    font-weight: 500;
+    left:9rem;
+    top:10px;
+}
+.individual a{
+    text-decoration: none;
+}

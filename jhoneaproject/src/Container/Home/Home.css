@@ -1,0 +1,9 @@
+.Home{
+display: block;
+}
+.Multi{
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+    width: 96%;
+    height: auto;
+}

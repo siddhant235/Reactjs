@@ -1,0 +1,172 @@
+.Navbar {
+    
+   padding:0.2rem;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+    display:inline-block ;
+    line-height: 1.9;
+    color:#777;
+    flex-flow:row;
+    height: 100%;
+    width: 100%;
+background-color: #bb723e;
+text-align: left;
+    
+}
+.Navbar::selection{
+    background: #91b2c3;
+    color:#fff;
+}
+.Rightitems {
+    text-align: right;
+    margin-left: 65rem;
+    width: auto;
+    display: flex;   
+    flex-flow:row; 
+    top:0;
+   
+}
+.Rightitems li {
+    text-align: right;
+   margin:0px 20px;
+   display: block;
+   color: #fff;
+   font-size: 0.933rem;
+   top:0px;
+
+
+
+   
+}
+.user{
+    width: 25px;
+    height:25px;
+    border-radius: 50%;
+    margin:0px 10px;
+    font-size: 0.933rem;
+}
+.Rightitems a {
+    
+    text-decoration: none;
+
+    color: #fff;
+  margin:0.1rem 0.5rem;
+ display: flex;
+ flex-flow: row;
+ font-size: 0.933rem;
+ 
+ 
+}
+
+.Rightitems i{
+    margin: 0.5rem 0.5rem;
+    color: #fff;
+
+}
+.Leftitems{
+ float: left;
+    
+}
+.Leftitems a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    height: 100%;
+   display:flex;
+   line-height: 1.9rem;
+ flex-flow: row;
+ font-size: 0.833rem;
+ margin:0.1rem 10rem;
+ letter-spacing: 0.05rem;
+
+   
+}
+.Leftitems img{
+    margin:0px 5px;
+    
+}
+.icons{
+    margin:0px 10px;
+    color: #fff;
+ 
+}
+
+
+
+
+    
+   
+  
+
+
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown1{
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+  position: absolute;
+    background-color: #f9f9f9;
+    width:100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    margin-top: 0rem;
+    margin-left: 2rem;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color:#777;
+    display: none;
+    /* padding: 12px 16px; */
+    /* text-decoration: none; */
+  
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {color: #bb723e;
+    animation-name: login;
+    animation-duration:0.3s ;
+    animation-timing-function: linear;
+}
+@keyframes login{
+ 0%{
+   opacity:0;
+   height:0%;
+  
+ }
+  50%{
+    opacity:0.7;
+    height:50%;
+  
+  }
+  100%{
+    opacity:1;
+    height:100%
+  }
+}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown1:hover .dropdown-content  {
+    display: block;
+    animation-name: login;
+    animation-duration:0.3s ;
+    animation-timing-function: linear;
+    
+  }
+  .dropdown1:hover .dropdown-content a {
+    display: block;
+    animation-name: login;
+    animation-duration:0.3s ;
+    animation-timing-function: linear;
+    
+  }
+ 
+  
+
+  

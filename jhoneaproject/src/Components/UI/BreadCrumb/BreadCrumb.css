@@ -1,0 +1,40 @@
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    /* display: flex; */
+    
+  
+   
+}
+.breadcrumb-item{
+    float:left;
+    color:#777;
+    text-decoration: none;
+}
+.wrap{
+    position: relative;
+    top:50px;
+    width:auto;
+    z-index: 9967;
+ 
+   
+}
+.breadcrumb-item a{
+    color: #777;
+    text-decoration: none;
+}
+.breadcrumb-item a:hover{
+    color:#bb732e !important;
+}
+.breadcrumb-item:hover{
+    color:#bb732e !important;
+    cursor: pointer;
+}
+.crumb-hr{
+    position: absolute;
+   z-index: 9967;
+    top:15rem;
+    width: 50%;   
+}
+.active a :hover{
+cursor:disabled;
+}

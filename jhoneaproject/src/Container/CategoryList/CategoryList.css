@@ -1,0 +1,145 @@
+.banner-image{
+    width:100vh;
+    height:20vh;
+    position: relative;
+    left:35rem;
+    top:6rem;
+    vertical-align: middle;
+    border: none;
+}
+.category-container{
+    box-sizing: border-box;
+
+}
+.Product-Subcategory{
+    box-sizing: border-box;
+    padding: 10px 10px;
+    background-color: #ffff;
+    height:300px;
+    width:300px;
+    z-index: 2;
+    border: 1px solid transparent;
+    box-shadow:10px 10px 8px #999999 ;
+    position: relative;
+    left:13rem;
+    bottom: 4rem;
+
+
+}
+.back-Container{
+    background-color: #f5f5f5;
+    width: 100%;
+    height:auto;
+    position: relative;
+    bottom:0rem;
+    top:4rem;
+    display: grid;
+}
+.subheader{
+    font-size: 18px;
+    font-weight:600;
+    font-family: 'Roboto-Bold';
+    text-transform: uppercase;
+}
+.sub-crumb{
+   position: relative;
+   left:33rem;
+}
+.Product-Subcategory hr{
+    position: relative;
+    bottom: 0.8rem;
+
+}
+.sub-input{
+    font-size: 15px;
+    position: relative;
+    font-weight: 450;
+    left: 0rem;
+    line-height: 2.5;
+    display: grid;
+    text-align: left;
+    grid-template-columns: auto auto;
+    background-color: #ffff;
+    box-sizing: border-box;
+
+}
+.sub-input input{
+   
+    margin-right: 1rem;
+    width:17px;
+    height: 17px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: #bb732e;
+    
+   
+}
+.sub-input input:hover+label{
+   
+    color: #bb732e;
+}
+.sub-input input:hover{
+    cursor: pointer;
+}
+.sub-input input:checked+label{
+    color: #bb732e !important;
+}
+.sub-input label:hover{
+    color:#bb732e;
+    cursor:pointer;
+}
+.filter-category{
+    box-sizing: border-box;
+    padding: 10px 10px;
+    background-color: #ffff;
+    height:300px;
+    width:300px;
+    z-index: 2;
+    display: grid;
+    border: 1px solid transparent;
+    box-shadow:10px 10px 8px #999999 ;
+    position: relative;
+    left:13rem;
+    bottom: 0rem;
+
+
+}
+.filter-subcategory hr{
+    position: relative;
+    bottom: 0.8rem;
+
+}
+
+.icon1{
+    position: relative;
+    left:8rem;
+    bottom: 1.5rem;
+}
+.icon2{
+    position: relative;
+    left:8rem;
+    bottom: 1.5rem;
+}
+.grid-list{
+    position: relative;
+    left:35rem;
+    top:20rem;
+    
+}
+.grid-list i{
+    font-size: 25px;
+    padding: 0px 15px;
+
+    box-sizing: border-box;
+    border: 1px solid transparent;
+    color: #888;
+    
+}
+
+.grid-list i:hover{
+   
+    cursor: pointer;
+    background-color: #bb732e;
+    transition: all 0.8s ease;
+    
+}
