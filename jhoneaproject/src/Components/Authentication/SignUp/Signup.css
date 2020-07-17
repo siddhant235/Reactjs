@@ -1,0 +1,35 @@
+
+.signup input{
+
+    display:grid;
+    /* grid-template-columns: auto auto; */
+    left:5rem;
+    width: 300px;
+    margin-left: 2rem;
+
+   
+ }
+ #country
+ {   width:300px;
+    padding:7px 10px;
+     margin-left:2rem;
+ }
+
+ .Buttonsubmit1:hover {
+    background-color: #bb732e;
+    transition: all 0.4s ease-in-out;
+   
+  }
+  .Buttonsubmit1 {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    background-color: #0b1357;
+    color: #ffffff !important;
+    display: inline-block;
+    border-radius: 4px;
+  position: relative;
+  top:20rem;
+  left:8rem;
+    border: 1px solid transparent;
+  }

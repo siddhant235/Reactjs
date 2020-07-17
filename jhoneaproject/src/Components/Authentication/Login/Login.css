@@ -5,9 +5,10 @@
   font-weight: 500;
   
   z-index: 9967;
+  
 
 }
-.Button {
+.Buttonsubmit {
   height: 40px;
   line-height: 40px;
   padding: 0 20px;
@@ -19,7 +20,7 @@ position: relative;
 left:8rem;
   border: 1px solid transparent;
 }
-.Button:hover {
+.Buttonsubmit:hover {
   background-color: #bb732e;
   transition: all 0.4s ease-in-out;
 }

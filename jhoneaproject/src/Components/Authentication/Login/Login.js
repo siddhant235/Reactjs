@@ -2,27 +2,38 @@ import React, { Component } from "react";
 import "./Login.css";
 import Modal from '../../UI/Modal/Modal'
 class login extends Component {
+  state={
+    closed:true
+  }
+  close=()=>{
+    this.setState({
+      closed:false
+    })
+  }
   handleSubmit(e) {
     e.preventDefault();
   }
   render() {
     return (
         <React.Fragment>
-        
-      <div className="login">
-      <Modal>
-        <form id="form" onSubmit={this.handleSubmit}>
-          
+         {(this.state.closed&&this.props.show) && (<Modal show>
+      <div className="login"  >
+     
+        <form id="form" onSubmit={this.handleSubmit} >
+        <i class="fas fa-times" onClick={this.close} style={{
+          position:"absolute",
+          left:"22rem"}}></i>
             <label for="email">E-mail:</label>
           <input id="email" type="email" required /><br/>
-          <label for="email">Password:</label>
-          <input id="password" type="password" required /><br/>
-          <button type="submit" className="Button">SignIn</button>
           
+          <label for="pasword">Password:</label>
+          <input id="password" type="password" required /><br/>
+          <button type="submit" className="Buttonsubmit">SignIn</button>
+         
         </form>
-        </Modal>
+       
       </div>
-   
+      </Modal>)}
      
       </React.Fragment>
     );

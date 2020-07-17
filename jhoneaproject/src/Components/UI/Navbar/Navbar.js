@@ -1,6 +1,6 @@
 import React,{Component} from 'react'
-import {Link} from 'react-router-dom'
 import Login from '../../Authentication/Login/Login'
+import SignUp from '../../Authentication/SignUp/Signup'
 import user from '../../../assets/images/user-icon.png'
 import   './Navbar.css'
 import customerCare from '../../../assets/images/customer-care-icon.png'
@@ -11,7 +11,14 @@ class Navbar extends Component{
     }
     login=()=>{
         this.setState({
-            showLogin:true
+            showLogin:!this.state.showLogin,
+          
+        })
+    }
+    signup=()=>{
+        this.setState({
+          
+            showSignUp:!this.state.showSignUp
         })
     }
     render(){
@@ -26,12 +33,13 @@ class Navbar extends Component{
           
         <div className="Rightitems">
         <span className="dropdown1">
-            <Link id="/login"> <img src={user} alt="User" className="user"/>Login<i className="fas fa-angle-down"></i></Link>
+             <img src={user} alt="User" className="user" /><span style={{color:"white"}}>Login</span><i className="fas fa-angle-down"></i>
             <div className="dropdown-content">
 
-                <p onClick={this.login}>Login</p>
+                <p onClick={this.login} show="true" >Login</p>
+                <p onClick={this.signup} show="true" >Register</p>
                
-                <Link to="/Signup">Register</Link>
+              
             </div>
            
             </span>
@@ -43,7 +51,8 @@ class Navbar extends Component{
             </div>
            
         </div>
-        {this.state.showLogin&& <Login/>}
+        {this.state.showLogin&& <Login show="true"/>}
+        {this.state.showSignUp&& <SignUp show="true"/>}
         </div>
        
      )
