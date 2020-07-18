@@ -5,7 +5,7 @@ const initialState={
     homeDetails:[],
     countryDetails:[],
     stateDetails:[],
-    cityDeatils:[],
+    cityDetails:[],
     homeloading:true
 }
 

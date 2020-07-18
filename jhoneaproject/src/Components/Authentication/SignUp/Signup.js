@@ -4,9 +4,23 @@ import "./Signup.css";
 import {connect} from 'react-redux';
 import Modal from '../../UI/Modal/Modal'
 class Signup extends Component {
-  state={
-    closed:true
+  constructor(props){
+    super(props)
+ this.state={
+    closed:true,
+  
+    FullName:'',
+    email:'',
+      country:'',
+      stateName:'',
+      city:'',
+      userID:''
+
+  
   }
+  this.handlechange=this.handlechange.bind(this)
+  this.handleSubmit=this.handleSubmit.bind(this)
+}
   close=()=>{
     this.setState({
       closed:false
@@ -14,6 +28,13 @@ class Signup extends Component {
   }
   handleSubmit(e) {
     e.preventDefault();
+    const data=[{FullName:this.state.FullName,
+                  country:this.state.country,
+                  state:this.state.stateName,
+                  city:this.state.city,
+                  email:this.state.email
+                  }]
+    console.log(data);
   }
   componentDidMount(){
       this.props.onGetCountryDetails();
@@ -22,13 +43,18 @@ class Signup extends Component {
      
     
   }
+  handlechange=(e)=>{
+    this.setState({
+      [e.target.name]:e.target.value
+    })
+  }
   render() {
-    console.log(this.props.stateDetails);
+    
       let countries=(
           this.props.countries.map(country=>{
               return(
                 
-                  <option>{country.countryName}</option> 
+                  <option name="country" value={country.countryName} >{country.countryName}</option> 
             
               )
           })
@@ -37,23 +63,33 @@ class Signup extends Component {
         this.props.stateDetails.map(state=>{
             return(
               
-                <option>{state.stateName}</option> 
+                <option name="stateName">{state.stateName}</option> 
         
             )
         })
     )
-    // let cities=(
-    //     this.props.city.map(citi=>{
-    //         return(
-    //           <select id="country"  required >
-    //             <option>{citi.cityName}</option> 
-    //            </select>
-    //         )
-    //     })
-    // )
+   
+    let cities=(
+        // this.props.city.map(citi=>{
+        //     return(
+             
+        //         <option>{citi.cityName}</option> 
+             
+        //     )
+        // })
+       
+        this.props.city.map(citi=>{
+          return(
+           
+              <option name="city">{citi.cityName}</option> 
+           
+          )
+      })
+    )
     return (
         <React.Fragment>
-         {(this.state.closed&&this.props.show) && (<Modal show="true" size="500px">
+          <div className="Signup">
+         {(this.state.closed&&this.props.show) && (<Modal show="true" size="800px">
       <div className="signup">
       <header>
                 Signup
@@ -67,24 +103,26 @@ class Signup extends Component {
         <form id="form" onSubmit={this.handleSubmit}>
             
         
-            <label for="text">Enter Full Name</label>
-          <input id="text" type="text" required placeholder="Enter Full Name" /><br/>
+            <label htmlFor="text">Enter Full Name</label>
+          <input id="text" type="text" required placeholder="Enter Full Name" name="FullName" onChange={this.handlechange}/><br/>
+          <label htmlFor="text">E-mail:</label>
+          <input id="text" type="email" required placeholder="Enter E-mail" name="email" onChange={this.handlechange}/><br/>
 
           
-          <label for="country">Country</label><br/>
-          <select id="country"  required >
+          <label htmlFor="country">Country</label><br/>
+          <select id="country" onChange={this.handlechange} required >
             {countries}
             </select>
           <br/>
             
-          <label for="country">State</label><br/>
-          <select id="country"  required >{states}</select>
+          <label htmlFor="country">State</label><br/>
+          <select id="country"  onChange={this.handlechange}  required >{states}</select>
 
             
           <br/>
             
-          {/* <label for="country">City</label><br/>
-            {cities} */}
+          <label htmlFor="country">City</label><br/>
+          <select id="country"  required onChange={this.handlechange} >{cities}</select> 
           <br/>
           <button type="submit" className="Buttonsubmit1">Submit</button>
          
@@ -92,7 +130,7 @@ class Signup extends Component {
        
       </div>
       </Modal>)}
-     
+     </div>
       </React.Fragment>
     );
   }

@@ -34,7 +34,7 @@ right:20rem;
 
 .price h3 {
   color: #bb732e;
-  top: 2.5rem;
+  top: 10rem;
 }
 .price p{
     position: absolute;
@@ -96,7 +96,7 @@ input[type="number"] {
 .field p{
    
     
-    position: static;
+   margin-left: 20rem;
   right:100px;
   font-weight: 500;
   font-size: larger;

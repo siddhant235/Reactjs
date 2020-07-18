@@ -23,8 +23,8 @@ class login extends Component {
         <i class="fas fa-times" onClick={this.close} style={{
           position:"absolute",
           left:"22rem"}}></i>
-            <label for="email">E-mail:</label>
-          <input id="email" type="email" required /><br/>
+            <label for="number">Mobile Number</label>
+          <input id="number" type="text" pattern="[0-9]+" required /><br/>
           
           <label for="pasword">Password:</label>
           <input id="password" type="password" required /><br/>

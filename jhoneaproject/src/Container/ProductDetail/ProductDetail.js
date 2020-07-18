@@ -100,17 +100,17 @@ class productDetail extends Component {
           />
           </Suspense>
           <span className="product-text">
-          <h1>{data.productName}</h1>
+          <h1 style={{fontSize:"22px"}}>{data.productName}</h1>
             <p>{data.productReviewCount} Reviews</p>
             <span className="price">
-              <h3>
+              <h3 >
                 <i className="fas fa-rupee-sign"></i>
                 {data.productPrice}
               </h3>
 
-              <p>5 pcs</p>
+          
             </span>
-            <fieldset className="field">
+            <section className="field">
               <img src={Delieveryimg} alt="Delivery-icon" />
               <span className="delivery-arrow">
                 <a href="/delivery">
@@ -141,7 +141,7 @@ class productDetail extends Component {
                   1000
                 </span>
               </p>
-            </fieldset>
+            </section>
             <input type="number" min="0" defaultValue="0"  name="val" />
             <NavLink to="/checkout" exact className="checkout-button">
               Buy Now
