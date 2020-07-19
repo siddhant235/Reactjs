@@ -9,7 +9,9 @@ class checkout extends Component {
   render() {
     return (
       <React.Fragment>
+          <div className="wraping">
         <MegaMenu />
+        </div>
         <div className="Your-Wrapper">
           <span className="Your-Bread">
             <BreadCrumb addrs="Checkout" />

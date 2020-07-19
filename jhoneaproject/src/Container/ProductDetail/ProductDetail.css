@@ -1,6 +1,6 @@
 .wraping {
   border-bottom: 16px solid transparent;
-  box-shadow: 10px 10px 10px #666666;
+  box-shadow: 5px 5px 5px #6666;
 }
 
 .container1 {
@@ -9,7 +9,7 @@
   height: 80rem;
   padding:10px 50rem;
   position: relative;
-  top:1rem;
+ 
 }
 .container2 {
   background-color: #ffff;

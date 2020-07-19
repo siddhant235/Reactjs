@@ -8,7 +8,7 @@ class myCart extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="mycartmenu-wraping">
+        <div className="wraping">
           <MegaMenu />
         </div>
 
