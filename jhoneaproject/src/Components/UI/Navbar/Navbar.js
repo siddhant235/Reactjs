@@ -47,7 +47,7 @@ class Navbar extends Component{
             <a href="#default"><i className="far fa-heart"></i>Wishlist</a>
             <a href="#default"><i className="far fa-bell"></i></a>
             <div className="icons">
-            <a href="#default">Checkout</a>
+            <a href="/checkout">Checkout</a>
             </div>
            
         </div>

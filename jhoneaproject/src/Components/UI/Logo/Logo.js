@@ -48,9 +48,9 @@ const logo = () => {
               <NavLink to="/mycart" className="buttoned">
                 View Cart
               </NavLink>
-              <a href="/checkout" className="buttoned">
+              <NavLink to="/checkout" className="buttoned">
                 Checkout
-              </a>
+              </NavLink>
             </div>
           </div>
         </div>

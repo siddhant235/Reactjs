@@ -1,5 +1,6 @@
 import React, { Component,Suspense} from "react";
 import {Route,Switch} from "react-router-dom";
+const Checkout=React.lazy(()=>import('../../Components/Checkout/Checkout'))
 const Layout=React.lazy(()=>import('../../Components/Layout/Layout'))
 const Home=React.lazy(()=>import('../Home/Home'))
 const ProductDetail=React.lazy(()=>import('../ProductDetail/ProductDetail'))
@@ -23,7 +24,9 @@ class App extends Component {
           <Route path="/category-list/" exact component={CategoryList}/>
           <Route path="/login/" exact component={Login}/>
           <Route path="/Signup/" exact component={Signup}/>
+          <Route path="/checkout/" exact component={Checkout}/>
           <Route Path="/user/mycart/" exact component={MyCart}/>
+          
       </Switch>
       </Suspense>
     

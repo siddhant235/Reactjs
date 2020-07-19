@@ -11,9 +11,9 @@ class Signup extends Component {
   
     FullName:'',
     email:'',
-      country:'',
-      stateName:'',
-      city:'',
+      country:'India',
+      stateName:'GUJARAT',
+      city:'aaa',
       userID:''
 
   
@@ -54,7 +54,7 @@ class Signup extends Component {
           this.props.countries.map(country=>{
               return(
                 
-                  <option name="country" value={country.countryName} >{country.countryName}</option> 
+                  <option name="country" value={country.countryName}>{country.countryName}</option> 
             
               )
           })
@@ -63,25 +63,18 @@ class Signup extends Component {
         this.props.stateDetails.map(state=>{
             return(
               
-                <option name="stateName">{state.stateName}</option> 
+                <option name="stateName"  value={state.stateName}>{state.stateName}</option> 
         
             )
         })
     )
    
     let cities=(
-        // this.props.city.map(citi=>{
-        //     return(
-             
-        //         <option>{citi.cityName}</option> 
-             
-        //     )
-        // })
-       
+    
         this.props.city.map(citi=>{
           return(
            
-              <option name="city">{citi.cityName}</option> 
+              <option name="city"   value={citi.cityName}>{citi.cityName}</option> 
            
           )
       })
@@ -110,19 +103,19 @@ class Signup extends Component {
 
           
           <label htmlFor="country">Country</label><br/>
-          <select id="country" onChange={this.handlechange} required >
+          <select id="country" onChange={this.handlechange} name="country" value={this.state.country}  >
             {countries}
             </select>
           <br/>
             
           <label htmlFor="country">State</label><br/>
-          <select id="country"  onChange={this.handlechange}  required >{states}</select>
+          <select id="country"  onChange={this.handlechange} name="stateName"  value={this.state.stateName} >{states}</select>
 
             
           <br/>
             
           <label htmlFor="country">City</label><br/>
-          <select id="country"  required onChange={this.handlechange} >{cities}</select> 
+          <select id="country"  onChange={this.handlechange}  name="city" value={this.state.city}>{cities}</select> 
           <br/>
           <button type="submit" className="Buttonsubmit1">Submit</button>
          
