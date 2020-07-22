@@ -14,17 +14,32 @@ import "./ProductDetail.css";
 import ReactTooltip from "react-tooltip";
 const ReactImageMagnify=React.lazy(()=>import('react-image-magnify'))
 class productDetail extends Component {
-  state = {
+  constructor(props)
+  { super(props);
+  this.state = {
     val:null,
     text:null,
     description: true,
     reviews: false,
-  };
+    prods:[{
+    name:'hi',
+    quantity:'hello',
+    image:'by',
+    price:'pi',
+    productID:'0'}]
+  
+    
+  }
+  this.handleinput=this.handleinput.bind(this)
+}
+  
   componentDidMount() {
     window.scrollTo(0, 0);
     
    this.props.onGetproductDetails();
    this.props.onGetSimilarProducts();
+  //  this.props.onSendALLProducts();
+  
   }
   componentWillUnmount(){
     this.props.onGetproductDetails();
@@ -37,17 +52,38 @@ class productDetail extends Component {
       description: true,
     });
   };
+ 
   reviews = () => {
     this.setState({
       reviews: true,
       description: false,
     });
   };
-  handleinput(target)
-  {
-    this.setState({
-      val:target.value
-    })
+  handleinput(event)
+  { 
+    let arr1=this.props.similarProductDetails.concat(this.props.productDetails)
+    var clean = arr1.filter((arr1, index, self) =>
+    index === self.findIndex((t) => (t.productID === arr1.productID)))
+    clean.filter(item=>item.productID===this.props.match.params.id).map(data=>{
+  
+      this.setState({
+       
+        prods:[{productID:data.productID,
+              image:data.productImage,
+               price:data.productPrice,
+              name:data.productName,
+              [event.target.name]:event.target.value,
+            }]
+      })})
+     
+ 
+  }
+  handleAddtoCart=()=>{
+ 
+
+this.props.onSendALLProducts(this.state.prods)
+
+  
   }
   render() {
   
@@ -58,6 +94,7 @@ class productDetail extends Component {
     let breadCrumb=(
             
      clean.filter(item=>item.productID===this.props.match.params.id).map(data=>{
+      
       return(
         <div className="product-crumb" key={data.productID}>
           <Crumb addrs={data.productName} />
@@ -142,13 +179,15 @@ class productDetail extends Component {
                 </span>
               </p>
             </section>
-            <input type="number" min="0" defaultValue="0"  name="val" />
+           
+            <input type="number" min="0" defaultValue="0"  name="quantity" onChange={this.handleinput} />
             <NavLink to="/checkout" exact className="checkout-button">
               Buy Now
             </NavLink>
-            <NavLink to="/mycart" exact className="mycart-button" onClick={()=>this.props.onSendALLProducts(data.productID)}>
+            <button    className="mycart-button" onClick={this.handleAddtoCart}>
               Add to Cart
-            </NavLink>
+            </button>
+        
           </span>
           <span className="wish">
             <a href="/product" data-tip="Add to Wishlist">
@@ -278,7 +317,7 @@ class productDetail extends Component {
     })
   )
   
- 
+  console.log(this.props.carts);
     return (
       <React.Fragment>
         <div className="wraping">
@@ -298,6 +337,7 @@ class productDetail extends Component {
               slidesPerPage={3.5}
               slidesPerScroll={1}
             />
+           
         <Footer />
       </React.Fragment>
     );
@@ -307,7 +347,8 @@ const mapStateToProps = (state) => {
   return {
     productDetails: state.product.productDetails,
     similarProductDetails:state.product.similarProducts,
-    productloading:state.product.productloading
+    productloading:state.product.productloading,
+    carts:state.cart.allproducts
   };
 };
 const mapDispatchToProps=(dispatch)=>{

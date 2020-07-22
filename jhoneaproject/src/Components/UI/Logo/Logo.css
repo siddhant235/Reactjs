@@ -50,7 +50,7 @@ height:300px;
   line-height: 1.5;
   animation: cart 0.5s linear forwards;
   justify-content: center;
-  z-index: 9967;
+  z-index: 99967;
 }
 .image-text{
   display: flex;

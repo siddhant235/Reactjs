@@ -13,6 +13,8 @@ import "./index.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./Container/App/App";
 import registerServiceWorker from "./registerServiceWorker";
+import {persistStore,persistReducer} from 'redux-persist';
+import storage from 'redux-persist/lib/storage'
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const RootReducers = combineReducers({
   product: ProductDetailReducer,
@@ -20,10 +22,18 @@ const RootReducers = combineReducers({
   home:HomeReducer,
   cart:CartReducer
 });
+const persistConfig={
+  key:'cart',
+  storage:storage,
+  whitelist:['cart']
+}
+const pReducer=persistReducer(persistConfig,RootReducers)
 const store = createStore(
-  RootReducers,
+pReducer,
   composeEnhancers(applyMiddleware(thunk))
 );
+const persistor=persistStore(store);
+export{persistor,store}
 const theApp = (
   <Provider store={store}>
     <BrowserRouter forceRefresh={true}>

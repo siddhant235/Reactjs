@@ -8,10 +8,12 @@ Order:[]
 
 const allproductdetails=(state,action)=>{
 
-    const id= updateObject(state,{allproducts:action.products});
+ 
     return updateObject(state,{
-        allproducts:state.allproducts.concat(id)
+        allproducts:state.allproducts.concat(action.products)
+       
     })
+    
 }
 
 const cartreducer=(state=initialState,action)=>{

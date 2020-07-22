@@ -23,8 +23,10 @@ export const removeitems=(itemID)=>{
 }
 export const cart=(products)=>{
     return dispatch=>{
+       
         dispatch(allproducts(products))
-        
+       
+       
             console.log(products)
         
         

@@ -1,11 +1,25 @@
 import React, { Component } from "react";
 import "./MyCart.css";
+import {connect} from 'react-redux'
 import MegaMenu from "../UI/MegaMenu/MegaMenu";
 import BreadCrumb from "../UI/BreadCrumb/BreadCrumb";
 import img from "../../assets/images/product1.jpg";
 import Footer from "../UI/Footer/Footer";
 class myCart extends Component {
+ 
   render() {
+   
+    let products=(
+      this.props.cartDetails.map(item=>{
+        return(
+          <div>
+            <p>{item.name}</p>
+            <p>{item.price}</p>
+          </div>
+        )
+      })
+    )
+    console.log(this.props.cartDetails)
     return (
       <React.Fragment>
         <div className="wraping">
@@ -15,13 +29,14 @@ class myCart extends Component {
         <div className="mycart-data">
           <BreadCrumb addrs="My Cart" />
           <form>
+      
           <div className="data-headers ">
             <h6>Image</h6>
             <h6>Product</h6>
             <h6>Price</h6>
             <h6>Quantity</h6>
             <h6>Delete</h6>
-
+       
             <img
               src={img}
               alt="product"
@@ -79,12 +94,19 @@ class myCart extends Component {
         </form>
         </div>
       
+      
 
         
         <Footer />
-        
+        {products}
       </React.Fragment>
     );
   }
 }
-export default myCart;
+const mapStateToProps=(state)=>{
+  return{
+    cartDetails:state.cart.allproducts
+  }
+}
+
+export default connect(mapStateToProps)(myCart);
