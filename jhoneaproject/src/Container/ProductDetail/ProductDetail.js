@@ -355,7 +355,7 @@ const mapDispatchToProps=(dispatch)=>{
   return{
     onGetproductDetails:()=>dispatch(actionCreator.getproductdetails()),
     onGetSimilarProducts:()=>dispatch(actionCreator.getSimilarProductdetails()),
-    onSendALLProducts:(products)=>dispatch(Cartaction.cart(products))
+    onSendALLProducts:(products)=>dispatch(Cartaction.allproducts(products))
   }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(productDetail);

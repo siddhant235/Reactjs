@@ -21,11 +21,11 @@ export const removeitems=(itemID)=>{
     }
 
 }
-export const cart=(products)=>{
+export const cart=(products,itemID)=>{
     return dispatch=>{
        
         dispatch(allproducts(products))
-       
+        dispatch(removeitems(itemID))
        
             console.log(products)
         
