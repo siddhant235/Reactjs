@@ -10,7 +10,7 @@ class myCart extends Component {
   render() {
     let products = this.props.cartDetails.map((item) => {
       return (
-        <div key={item.id} className="Cartitems">
+        <div key={item.productID} className="Cartitems">
           <img
             src={`http://13.235.251.42/grocery/backend/web/uploads/products/${item.image}`}
             alt="product"
@@ -48,7 +48,7 @@ class myCart extends Component {
             <i
               className="fas fa-trash"
               style={{ marginLeft: "85px" ,cursor:"pointer" }}
-              onClick={()=>this.props.onRemoveItems(item.id)}
+              onClick={()=>this.props.onRemoveItems(item.productID)}
             />
           </p>
         </div>
@@ -73,9 +73,11 @@ class myCart extends Component {
           </div>
           <div className="products-position">{products}</div>
           <button className="checkout">Checkout</button>
+    <p>{this.props.carttotal}</p>
         </div>
 
         <Footer />
+        <p>{this.props.carttotal}</p>
       </React.Fragment>
     );
   }
@@ -83,6 +85,7 @@ class myCart extends Component {
 const mapStateToProps = (state) => {
   return {
     cartDetails: state.cart.allproducts,
+    carttotal:state.cart.total
   };
 };
 const mapDispatchToProps = (dispatch) => {

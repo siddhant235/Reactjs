@@ -23,10 +23,12 @@ class productDetail extends Component {
     reviews: false,
     prods:[{
     name:'hi',
-    quantity:'hello',
+    quantity:0,
     image:'by',
     price:'pi',
-    productID:'0'}]
+    productID:'0'}],
+    total:0,
+    addSuccessfull:false
   
     
   }
@@ -65,7 +67,7 @@ class productDetail extends Component {
     var clean = arr1.filter((arr1, index, self) =>
     index === self.findIndex((t) => (t.productID === arr1.productID)))
     clean.filter(item=>item.productID===this.props.match.params.id).map(data=>{
-  
+      
       this.setState({
        
         prods:[{productID:data.productID,
@@ -73,16 +75,29 @@ class productDetail extends Component {
                price:data.productPrice,
               name:data.productName,
               [event.target.name]:event.target.value,
-            }]
+            }],
+            addSuccessfull:false
       })})
      
+     this.cartValue();
  
+  }
+  cartValue=()=>{
+    let cartValue=0;
+    
+     cartValue+=(this.state.prods.quantity*this.state.prods.price)
+     this.setState({
+       total:cartValue
+     })
+    
   }
   handleAddtoCart=()=>{
  
 
-this.props.onSendALLProducts(this.state.prods)
-
+this.props.onSendALLProducts(this.state.prods,this.state.total)
+this.setState({
+addSuccessfull:true
+})
   
   }
   render() {
@@ -98,6 +113,7 @@ this.props.onSendALLProducts(this.state.prods)
       return(
         <div className="product-crumb" key={data.productID}>
           <Crumb addrs={data.productName} />
+
         </div>
       )
       
@@ -324,11 +340,12 @@ this.props.onSendALLProducts(this.state.prods)
           <Menu />
         </div>
        {breadCrumb}
-       
+       {this.state.addSuccessfull &&(<div className="AddItems">Added Successfully....</div>)}
         <div className="container1">
          {details}
         
         </div>
+       
         <MultiCarousel
               happening={simialrproducts}
               name="Similar Products"
@@ -355,7 +372,7 @@ const mapDispatchToProps=(dispatch)=>{
   return{
     onGetproductDetails:()=>dispatch(actionCreator.getproductdetails()),
     onGetSimilarProducts:()=>dispatch(actionCreator.getSimilarProductdetails()),
-    onSendALLProducts:(products)=>dispatch(Cartaction.allproducts(products))
+    onSendALLProducts:(products,total)=>dispatch(Cartaction.additems(products,total))
   }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(productDetail);

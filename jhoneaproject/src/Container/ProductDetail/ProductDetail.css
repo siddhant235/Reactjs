@@ -234,6 +234,27 @@ right:20rem;
 /* top:3rem; */
  
 } 
+.AddItems
+{
+  font-weight: 600;
+  font-size: larger;
+  position: relative;
+  left:10rem;
+  animation: added 2s linear forwards;
+
+}
+@keyframes added{
+  0%{
+   opacity: 1;
+  }
+  50%{
+   opacity: 0.5;
+  }
+  100%{
+   opacity: 0;
+   font-size: 0;
+  }
+}
 @keyframes wish{
 0%{
   

@@ -1,17 +1,20 @@
 import * as actiontypes from './actionTypes'
 
-export const allproducts=(products)=>{
+export const allproducts=(products,itemID,total)=>{
     return{
  type:actiontypes.ALL_PRODUCTS,
- products:products
+ products:products,
+ total:total,
+ itemID:itemID
 }
 }
 
 
-export const additems=(itemDetails)=>{
+export const additems=(itemDetails,itemID)=>{
     return{
         type:actiontypes.ADD_ITEM,
-        itemDetails:itemDetails
+        itemDetails:itemDetails,
+        itemID:itemID
     }
 }
 export const removeitems=(itemID)=>{
@@ -21,13 +24,13 @@ export const removeitems=(itemID)=>{
     }
 
 }
-export const cart=(products,itemID)=>{
+export const cart=(itemDetails,itemID,total)=>{
     return dispatch=>{
        
-        dispatch(allproducts(products))
+        dispatch(additems(itemDetails,itemID,total))
         dispatch(removeitems(itemID))
        
-            console.log(products)
+            console.log(itemDetails)
         
         
         
