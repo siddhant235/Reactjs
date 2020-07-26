@@ -1,13 +1,49 @@
 import React, { Component } from "react";
 import "./MyCart.css";
+import {Link} from 'react-router-dom'
 import { connect } from "react-redux";
 import MegaMenu from "../UI/MegaMenu/MegaMenu";
 import * as actions from "../../store/actions/Cart";
 import BreadCrumb from "../UI/BreadCrumb/BreadCrumb";
-import img from "../../assets/images/product1.jpg";
 import Footer from "../UI/Footer/Footer";
 class myCart extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      product: [{
+        productID:'',
+        quantity:0,
+        price:0
+        
+      }],
+      added:false
+    };
+    this.handleInput = this.handleInput.bind(this);
+
+  }
+  handleInput=(event,prodID,price)=>{
+   this.setState({
+      product:[{
+           productID:prodID,
+           [event.target.name]:event.target.value,
+           price:price
+      }],
+      added:true
+    })
+   
+    
+
+  }
+ 
   render() {
+    console.log(this.state.product)
+    while(this.state.added)
+    {
+      console.log(this.state.product)
+      this.props.onAddingItems(this.state.product)
+    this.state.added=false
+    
+  }
     let products = this.props.cartDetails.map((item) => {
       return (
         <div key={item.productID} className="Cartitems">
@@ -42,13 +78,15 @@ class myCart extends Component {
             type="number"
             style={{ height: "40px", marginLeft: "35px" }}
             min="0"
-            value={item.quantity}
+            defaultValue={item.quantity}
+            name="quantity"
+            onChange={(event)=>this.handleInput(event,item.productID,item.price)}
           />
           <p>
             <i
               className="fas fa-trash"
-              style={{ marginLeft: "85px" ,cursor:"pointer" }}
-              onClick={()=>this.props.onRemoveItems(item.productID)}
+              style={{ marginLeft: "85px", cursor: "pointer" }}
+              onClick={() => this.props.onRemoveItems(item.productID)}
             />
           </p>
         </div>
@@ -72,8 +110,10 @@ class myCart extends Component {
             <h6>Delete</h6>
           </div>
           <div className="products-position">{products}</div>
-          <button className="checkout">Checkout</button>
-    <p>{this.props.carttotal}</p>
+    
+          <Link to="/checkout" className="checkout">Checkout</Link>
+    
+          <p>{this.props.carttotal}</p>
         </div>
 
         <Footer />
@@ -85,12 +125,13 @@ class myCart extends Component {
 const mapStateToProps = (state) => {
   return {
     cartDetails: state.cart.allproducts,
-    carttotal:state.cart.total
+    carttotal: state.cart.total,
   };
 };
 const mapDispatchToProps = (dispatch) => {
   return {
     onRemoveItems: (itemID) => dispatch(actions.removeitems(itemID)),
+    onAddingItems:(products,itemID)=>dispatch(actions.additems(products,itemID))
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(myCart);

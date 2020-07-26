@@ -1,5 +1,6 @@
 import * as actiontypes from '../actions/actionTypes'
 import {updateObject} from '../utility'
+import { allproducts } from '../actions/Cart'
 
 
 
@@ -23,15 +24,20 @@ let existing_item=state.allproducts.findIndex(item=>item.productID===action.item
 console.log(existing_item)
 if(existing_item>=0)
 { let updatedArr=[...state.allproducts]
-    const totalquantity=+state.allproducts[existing_item].quantity+ +action.itemDetails[0].quantity;
+    const totalquantity= +action.itemDetails[0].quantity;
+  
     updatedArr[existing_item]={...updatedArr[existing_item],quantity:totalquantity}
    
     return updateObject(state,{
-            allproducts:updatedArr})
+            allproducts:updatedArr,
+        
+        
+        })
     
 }
 
 else{
+
         return updateObject(state,{
             allproducts:state.allproducts.concat(action.itemDetails),
             total:action.total
@@ -52,6 +58,7 @@ const cartreducer=(state=initialState,action)=>{
    switch(action.type){
        case actiontypes.ADD_ITEM:return additem(state,action);
        case actiontypes.REMOVE_ITEM:return removeitem(state,action);
+    
        default:return state;
    }
   

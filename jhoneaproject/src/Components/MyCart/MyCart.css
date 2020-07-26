@@ -58,11 +58,14 @@
   
 
 }
+.mycart-data a{
+text-decoration: none;
+}
 .checkout {
-  position: relative;
-  top:15rem;
-  left:20rem;
-  height: 40px;
+ position: relative;
+ left: 85rem;
+ bottom: 47rem;
+ height: 40px;
   line-height: 40px;
   padding: 0 20px;
   background-color: #0b1357;
@@ -70,6 +73,7 @@
   display: inline-block;
   border-radius: 4px;
   border: 1px solid transparent;
+  
 }
 .checkout:hover{
   background-color:#bb732e;

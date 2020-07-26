@@ -65,7 +65,7 @@ left:12rem;
 .order-detail
 {
     display: grid;
-    grid-template-columns: 300px 300px;
+    grid-template-columns: 300px 150px 200px;
     margin-top: 2rem;
     margin-left: 2rem;
 }
@@ -140,4 +140,22 @@ left:12rem;
     height: 8px;
     border-radius: 50%;
     background: white;
+  }
+  .checkout-items{
+    display: grid;
+    grid-template-columns: 300px 150px 200px;
+    padding: 10px 15px;
+    font-weight: 600;
+  }
+  .checkout-items p:nth-child(2){
+    display: inherit;
+    margin-left: 3rem;
+  }
+  .checkout-items p:nth-child(1){
+    display: inherit;
+    color: #bb732e;
+  }
+  .Your-Orders h3{
+    position: relative;
+    left:12rem;
   }
