@@ -21,11 +21,7 @@ class Signup extends Component {
   this.handlechange=this.handlechange.bind(this)
   this.handleSubmit=this.handleSubmit.bind(this)
 }
-  close=()=>{
-    this.setState({
-      closed:false
-    })
-  }
+
   handleSubmit(e) {
     e.preventDefault();
     const data=[{FullName:this.state.FullName,
@@ -82,12 +78,12 @@ class Signup extends Component {
     return (
         <React.Fragment>
           <div className="Signup">
-         {(this.state.closed&&this.props.show) && (<Modal show="true" size="800px">
+         {this.props.show&& (<Modal show="true" size="800px">
       <div className="signup">
       <header>
                 Signup
                 <hr/>        
-        <i className="fas fa-times" onClick={this.close} style={{
+        <i className="fas fa-times" onClick={this.props.close} style={{
           position:"absolute",
           left:"25rem",
           bottom:"16rem"

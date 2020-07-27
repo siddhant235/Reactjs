@@ -2,25 +2,18 @@ import React, { Component } from "react";
 import "./Login.css";
 import Modal from '../../UI/Modal/Modal'
 class login extends Component {
-  state={
-    closed:true
-  }
-  close=()=>{
-    this.setState({
-      closed:false
-    })
-  }
+
   handleSubmit(e) {
     e.preventDefault();
   }
   render() {
     return (
         <React.Fragment>
-         {(this.state.closed&&this.props.show) && (<Modal show>
+         {this.props.show && (<Modal show>
       <div className="login"  >
      
         <form id="form" onSubmit={this.handleSubmit} >
-        <i class="fas fa-times" onClick={this.close} style={{
+        <i class="fas fa-times" onClick={this.props.close} style={{
           position:"absolute",
           left:"22rem"}}></i>
             <label for="number">Mobile Number</label>

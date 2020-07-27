@@ -8,11 +8,12 @@ class Modal extends Component {
 
   
     render () {
+        const cssclass=["Modal",this.props.show?"ModalisOpen":"ModalisClosed"]
         return (
            <React.Fragment>
                 <Backdrop show={this.props.show} clicked={this.props.modalClosed} />
                 <div
-                    className="Modal"
+                    className={cssclass.join(' ')}
                     style={{
                        
                         height:this.props.size

@@ -9,16 +9,26 @@ class Navbar extends Component{
         showLogin:false,
         showSignUp:false
     }
-    login=()=>{
+    slogin=()=>{
         this.setState({
-            showLogin:!this.state.showLogin,
+            showLogin:true
           
         })
     }
-    signup=()=>{
+    clogin=()=>{
+        this.setState({
+            showLogin:false
+        })
+    }
+    showsignup=()=>{
         this.setState({
           
-            showSignUp:!this.state.showSignUp
+            showSignUp:true
+        })
+    }
+    closeSignup=()=>{
+        this.setState({
+            showSignUp:false
         })
     }
     render(){
@@ -36,8 +46,8 @@ class Navbar extends Component{
              <img src={user} alt="User" className="user" /><span style={{color:"white"}}>Login</span><i className="fas fa-angle-down"></i>
             <div className="dropdown-content">
 
-                <p onClick={this.login} show="true" >Login</p>
-                <p onClick={this.signup} show="true" >Register</p>
+                <p onClick={this.slogin} show="true" >Login</p>
+                <p onClick={this.showsignup} show="true" >Register</p>
                
               
             </div>
@@ -51,8 +61,8 @@ class Navbar extends Component{
             </div>
            
         </div>
-        {this.state.showLogin&& <Login show="true"/>}
-        {this.state.showSignUp&& <SignUp show="true"/>}
+        {this.state.showLogin&& <Login show={this.state.showLogin} close={this.clogin}/>}
+        {this.state.showSignUp&& <SignUp show={this.state.showSignUp} close={this.closeSignup}/>}
         </div>
        
      )
