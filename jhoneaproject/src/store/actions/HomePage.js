@@ -151,7 +151,7 @@ export const getcitydetails = () => {
       .then((response) => response.json())
       .then((res) => {
         dispatch(getcitydetailsSuccess(res[0].data));
-        console.log(res[0].data);
+       
       })
      
   };

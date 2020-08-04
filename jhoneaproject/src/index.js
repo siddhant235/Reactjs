@@ -14,13 +14,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import App from "./Container/App/App";
 import registerServiceWorker from "./registerServiceWorker";
 import {persistStore,persistReducer} from 'redux-persist';
+import authReducer from './store/reducers/AuthReducer'
 import storage from 'redux-persist/lib/storage'
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const RootReducers = combineReducers({
   product: ProductDetailReducer,
   search:SearchReducer,
   home:HomeReducer,
-  cart:CartReducer
+  cart:CartReducer,
+  auth:authReducer
 });
 const persistConfig={
   key:'cart',

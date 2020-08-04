@@ -18,8 +18,8 @@ function ControlledCarousel(props) {
       return (
         <Carousel.Item bsPrefix="carousel-item" key={ban.bannerID}>
           <LazyLoadImage
-           width="1800px"
-           height="300"
+           width="1500px"
+           height="411px"
             alt="Card Cap"
             src={`http://13.235.251.42/grocery/backend/web/uploads/banners/${ban.bannerImage}`}
             effect="blur"

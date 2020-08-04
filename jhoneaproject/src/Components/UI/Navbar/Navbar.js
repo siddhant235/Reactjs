@@ -11,7 +11,8 @@ class Navbar extends Component{
     }
     slogin=()=>{
         this.setState({
-            showLogin:true
+            showLogin:true,
+            showSignUp:false
           
         })
     }
@@ -62,7 +63,7 @@ class Navbar extends Component{
            
         </div>
         {this.state.showLogin&& <Login show={this.state.showLogin} close={this.clogin}/>}
-        {this.state.showSignUp&& <SignUp show={this.state.showSignUp} close={this.closeSignup}/>}
+        {this.state.showSignUp&& <SignUp show={this.state.showSignUp} close={this.closeSignup} showlogin={this.slogin}/>}
         </div>
        
      )

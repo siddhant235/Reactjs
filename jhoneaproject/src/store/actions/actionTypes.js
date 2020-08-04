@@ -20,3 +20,7 @@ export const GETCITY_DETAILS="CITY_DETAILS"
 export const ADD_ITEM="ADD_ITEM";
 export const REMOVE_ITEM="REMOVE_ITEM";
 export const ALL_PRODUCTS="ALL_PRODUCTS";
+
+export const AUTH_SIGNUP="SIGNUP";
+export const AUTH_LOGOUT="LOGOUT";
+export const AUTH_SIGNIN="SIGNIN"

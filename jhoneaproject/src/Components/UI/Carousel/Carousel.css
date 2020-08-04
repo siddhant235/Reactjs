@@ -1,9 +1,10 @@
 .owl {
   margin-top: 2rem;
-  width: 100%;
-  background-repeat: no-repeat;
+  width: 80%;
+  background-repeat: round;
   margin-bottom: 2rem;
-  background-size: cover;
+  margin-left: 9rem;
+  background-size: center;
   background-position: center center;
 
   height: 100%;

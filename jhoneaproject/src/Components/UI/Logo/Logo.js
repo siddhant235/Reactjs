@@ -28,7 +28,7 @@ const logo = () => {
                 </p>
               </span>
             </a>
-            <div className="dropdown">
+            {/* <div className="dropdown">
               <div className="image-text">
                 <a href="/img">
                   <img src={img1} alt="productimage" />
@@ -51,7 +51,7 @@ const logo = () => {
               <NavLink to="/checkout" className="buttoned">
                 Checkout
               </NavLink>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

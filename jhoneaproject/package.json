@@ -27,6 +27,7 @@
     "react-scripts": "3.4.1",
     "react-through": "^1.1.4",
     "react-tooltip": "^4.2.7",
+    "react-uuid": "^1.0.2",
     "redux": "^4.0.5",
     "redux-persist": "^6.0.0",
     "redux-thunk": "^2.3.0",
@@ -36,7 +37,8 @@
     "start": "set PORT=8010 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "proxy": "http://localhost:8010"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -53,4 +55,5 @@
       "last 1 safari version"
     ]
   }
+  
 }

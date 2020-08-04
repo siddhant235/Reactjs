@@ -181,3 +181,12 @@ opacity:0;
     
 }
 }
+@media (max-width:1296px){
+  .Logo{
+    width:70%;
+  }
+  .cart{
+    left:600px;
+  }
+
+}

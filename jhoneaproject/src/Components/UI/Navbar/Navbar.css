@@ -21,9 +21,9 @@ text-align: left;
 .Rightitems {
     text-align: right;
     margin-left: 65rem;
-    width: auto;
-    display: flex;   
-    flex-flow:row; 
+ 
+    display: grid;
+    grid-template-columns: 150px 100px 50px 100px; 
     top:0;
    
 }
@@ -173,6 +173,11 @@ text-align: left;
     animation-duration:0.3s ;
     animation-timing-function: linear;
     
+  }
+  @media (max-width:1294px){
+    /* .Navbar{
+      width:80%;
+    } */
   }
  
   

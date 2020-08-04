@@ -17,7 +17,7 @@ class checkout extends Component {
     let products=(
      this.props.products.map(item=>{
        return(
-         <div className="checkout-items">
+         <div className="checkout-items" key={item.price}>
            <p>{item.name}</p>
        <p>{item.quantity}</p>
        <p>{+item.quantity * +item.price}</p>
@@ -40,10 +40,10 @@ class checkout extends Component {
             <hr />
             <div className="addrs-card">
               <div className="addrs-content">
-                <label class="container">
+                <label className="container">
                   <input type="radio" name="radio" />
                   Home
-                  <span class="checkmark"></span>
+                  <span className="checkmark"></span>
                   <p style={{color:"#666"}}>
                     B-4, Shivalik Business Center, Opp. Kensville Golf Academy,
                     B/H. Rajpath Club Off. s.G.Highway, Ahmedabad, Gujrat 380054

@@ -19,7 +19,7 @@ class Home extends Component {
 
   }
   render() {
-    console.log(this.props.homeDetails);
+   
     let categories = <div>Loading....</div>;
 
     if (!this.props.homeloading) {

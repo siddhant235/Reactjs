@@ -29,7 +29,23 @@
     display: inline-block;
     border-radius: 4px;
   position: absolute;
-  top:40rem;
-  left:8rem;
+  top:24rem;
+  left:10rem;
     border: 1px solid transparent;
+  }
+  .Signed-up{
+   display: block;
+   text-align: center;
+   font-size: larger;
+   font-weight: 600;
+   margin-top:7rem;
+  }
+  .Signed-up p
+  {
+    color:#bb732e;
+  }
+  .Signed-up p:hover{
+    cursor: pointer;
+    color:#bb732e;
+   transform:scale(2);
   }
