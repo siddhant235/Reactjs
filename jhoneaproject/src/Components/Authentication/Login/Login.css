@@ -32,3 +32,10 @@ left:8rem;
    margin-left: 2rem;
   
 }
+.resend-otp{
+  color:"#bb732e";
+}
+.resend-otp:hover{
+  cursor: pointer;
+
+}

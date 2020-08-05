@@ -1,18 +1,23 @@
 import React,{Component} from 'react'
 import Login from '../../Authentication/Login/Login'
+import * as authaction from '../../../store/actions/authentication'
+import {connect} from 'react-redux';
 import SignUp from '../../Authentication/SignUp/Signup'
 import user from '../../../assets/images/user-icon.png'
 import   './Navbar.css'
 import customerCare from '../../../assets/images/customer-care-icon.png'
+import { Redirect } from 'react-router-dom';
 class Navbar extends Component{
     state={
         showLogin:false,
-        showSignUp:false
+        showSignUp:false,
+        loggedout:false
     }
     slogin=()=>{
         this.setState({
             showLogin:true,
-            showSignUp:false
+            showSignUp:false,
+            loggedout:false
           
         })
     }
@@ -32,7 +37,25 @@ class Navbar extends Component{
             showSignUp:false
         })
     }
+    logout=()=>{
+        this.props.onLogout();
+        this.setState({
+            loggedout:true
+        })
+    }
     render(){
+   const loginres=localStorage.getItem('otpRes')
+   let userData=''
+   let Username=''
+   if(loginres)
+   {
+   userData=JSON.parse(localStorage.getItem('userData'))
+    Username=userData.userFullName
+   }
+   if(this.state.loggedout)
+   {
+       return <Redirect to="/"/>
+   }
    
      return(
     <div className="Navbar">
@@ -44,12 +67,17 @@ class Navbar extends Component{
           
         <div className="Rightitems">
         <span className="dropdown1">
-             <img src={user} alt="User" className="user" /><span style={{color:"white"}}>Login</span><i className="fas fa-angle-down"></i>
+     <img src={user} alt="User" className="user" /><span style={{color:"white"}}>{loginres?Username:"Login"}</span><i className="fas fa-angle-down"></i>
             <div className="dropdown-content">
-
-                <p onClick={this.slogin} show="true" >Login</p>
-                <p onClick={this.showsignup} show="true" >Register</p>
-               
+              {loginres?<div>
+             
+                <p onClick={this.logout} >Logout</p></div>
+              
+              
+              :<div>
+                   <p onClick={this.slogin} show="true" >Login</p>
+                <p onClick={this.showsignup} show="true" >Register</p></div>
+              }
               
             </div>
            
@@ -69,4 +97,9 @@ class Navbar extends Component{
      )
 }
 }
-export default Navbar;
+const mapDispatchToProps=(dispatch)=>{
+    return{
+        onLogout:()=>dispatch(authaction.logout())
+    }
+}
+export default connect(null,mapDispatchToProps)(Navbar);

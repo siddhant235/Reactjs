@@ -23,4 +23,5 @@ export const ALL_PRODUCTS="ALL_PRODUCTS";
 
 export const AUTH_SIGNUP="SIGNUP";
 export const AUTH_LOGOUT="LOGOUT";
-export const AUTH_SIGNIN="SIGNIN"
+export const AUTH_SIGNIN="SIGNIN";
+export const AUTH_OTP="OTP";
