@@ -13,14 +13,14 @@ export const UserLogin = (Loginmessage, Loginstatus) => {
     Loginstatus: Loginstatus,
   };
 };
-// export const VerifiedUserData = (userData, status, message) => {
-//   return {
-//     type: actionTypes.AUTH_OTP,
-//     userData: userData,
-//     status: status,
-//     message: message,
-//   };
-// };
+export const VerifiedUserData = ( status, message) => {
+  return {
+    type: actionTypes.AUTH_OTP,
+  
+    status: status,
+    message: message,
+  };
+};
 export const Logout = () => {
   return {
     type: actionTypes.AUTH_LOGOUT,
@@ -97,9 +97,9 @@ export const otp = (newotp) => {
         console.log(res);
         localStorage.setItem("userData", JSON.stringify(res[0].data[0]));
         localStorage.setItem('otpRes',JSON.stringify(res[0].status))
-        // dispatch(
-        //   VerifiedUserData(res[0].data[0], res[0].status, res[0].message)
-        // );
+        dispatch(
+          VerifiedUserData(res[0].status, res[0].message)
+        );
       })
 
       .catch((err) => {

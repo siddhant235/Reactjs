@@ -24,7 +24,8 @@ const logo = () => {
               <span className="cart-text">
                 <p>
                   Shopping Cart
-                  <br />1 item - <i className="fas fa-rupee-sign"></i> 79.00
+                  <br />
+                  {/* 1 item - <i className="fas fa-rupee-sign"></i> 79.00 */}
                 </p>
               </span>
             </a>

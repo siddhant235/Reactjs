@@ -1,0 +1,74 @@
+.Profile-Container{
+    width:100%;
+    height: 90rem;
+    background-color: #f5f5f5;
+}
+.profile-bread
+{
+
+        position: relative;
+    left:8rem;
+    
+}
+
+.mgmenu {
+    border-bottom: 16px solid transparent;
+    box-shadow: 5px 5px 5px #6666;
+  }
+  .My-Profile{
+      position: relative;
+      top:7rem;
+      left:10rem;
+      width:80%;
+      background-color: #fff;
+      height:75rem;
+  }
+  .profileMenu{
+      display: flex;
+      flex-direction: row;
+     
+     
+  }
+  .profileMenu p{
+    position: relative;
+    right: 8rem;
+    margin:1rem;
+    font-size: 20px;
+    font-weight: 450;
+  }
+  /* .initialDetails  {
+     position: relative;
+     left:3rem;
+     top:3rem;
+}
+.initialDetails  p {
+    display: grid;
+    grid-template-columns: 200px 500px 200px 500px ; 
+     /* grid-gap: 20px; */
+/* }  */
+/* .initialDetails label{
+   
+    font-size: 23px;
+    font-weight: 400;
+    color:#666;
+}
+.initialDetails input{
+    width:30%;
+    padding:7px 10px;
+} */
+.initialDetails  {
+    display: grid;
+    grid-template-columns: 700px 700px ;
+    
+    grid-gap: 20px;
+    margin-left: 3rem;
+    margin-top:2rem;
+}
+.initialDetails p label  {
+    color:#666;
+    font-size: 23px;
+}
+.initialDetails p input{
+    width: 60%;
+    padding: 8px 10px;
+}

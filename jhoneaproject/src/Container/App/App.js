@@ -8,6 +8,7 @@ const CategoryList=React.lazy(()=>import('../CategoryList/CategoryList'))
 const Login=React.lazy(()=>import('../../Components/Authentication/Login/Login'))
 const Signup=React.lazy(()=>import('../../Components/Authentication/SignUp/Signup'))
 const MyCart=React.lazy(()=>import('../../Components/MyCart/MyCart'))
+const MyProfile =React.lazy(()=>import('../../Components/Profile/Profile'))
 class App extends Component {
   
   
@@ -25,6 +26,7 @@ class App extends Component {
           <Route path="/login/" exact component={Login}/>
           <Route path="/Signup/" exact component={Signup}/>
           <Route path="/checkout/" exact component={Checkout}/>
+          <Route path="/myprofile/" exact component={MyProfile}/>
           <Route Path="/user/mycart/" exact component={MyCart}/>
           
       </Switch>

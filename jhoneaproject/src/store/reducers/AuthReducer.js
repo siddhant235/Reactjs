@@ -24,6 +24,11 @@ const loginusers = (state, action) => {
     Loginmessage: action.Loginmessage,
   });
 };
+const otpVerify=(state,action)=>{
+  return updateObject({...state,
+  otpstatus:action.status
+  })
+}
 
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -31,7 +36,8 @@ const authReducer = (state = initialState, action) => {
       return addUsers(state, action);
     case actionTypes.AUTH_SIGNIN:
       return loginusers(state, action);
-   
+   case actionTypes.AUTH_OTP:
+     return otpVerify(state,action)
 
     default:
       return state;

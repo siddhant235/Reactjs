@@ -16,6 +16,7 @@ class login extends Component {
       apiType: "Android",
       apiVersion: "1.0",
       otp: "",
+      response:false
      
     };
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -73,9 +74,11 @@ class login extends Component {
   render() {
   
   
-    const Res=localStorage.getItem('otpRes')
+    // const Res=localStorage.getItem('otpRes')
+    // const Data={...this.state.response,response:Res}
 
-    if (Res) 
+
+    if (this.props.otpstatus) 
     {return <Redirect to="/" />}
     return (
       <React.Fragment>
@@ -142,6 +145,7 @@ const mapStateToProps = (state) => {
   return {
     loginmessage: state.auth.Loginmessage,
     loginstatus: state.auth.Loginstatus,
+    otpstatus:state.auth.otpstatus
    
   };
 };
