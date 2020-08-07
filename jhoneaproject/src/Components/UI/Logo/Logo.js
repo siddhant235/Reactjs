@@ -1,10 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import {NavLink} from 'react-router-dom'
 import Logo from "../../../assets/images/logo.png";
 import Search from "../Search/Search";
 import "./Logo.css";
-import img1 from "../../../assets/images/product5.jpg";
 
 const logo = () => {
   return (

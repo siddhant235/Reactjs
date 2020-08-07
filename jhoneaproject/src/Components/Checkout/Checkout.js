@@ -9,6 +9,8 @@ import Footer from "../UI/Footer/Footer";
 class checkout extends Component {
   
   render() {
+    let addrs=JSON.parse(localStorage.getItem('userData'))
+    addrs=addrs.addressAddressLine1;
   let total=0;
     for(let i=0;i<this.props.products.length;i++)
     {
@@ -45,8 +47,9 @@ class checkout extends Component {
                   Home
                   <span className="checkmark"></span>
                   <p style={{color:"#666"}}>
-                    B-4, Shivalik Business Center, Opp. Kensville Golf Academy,
-                    B/H. Rajpath Club Off. s.G.Highway, Ahmedabad, Gujrat 380054
+                    {/* B-4, Shivalik Business Center, Opp. Kensville Golf Academy,
+                    B/H. Rajpath Club Off. s.G.Highway, Ahmedabad, Gujrat 380054 */}
+                   {addrs}
                   </p>
                 </label>
                 <p className="fas fa-edit">Edit</p>

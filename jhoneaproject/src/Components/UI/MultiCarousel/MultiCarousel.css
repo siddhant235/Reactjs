@@ -1,6 +1,5 @@
 .Categories img{
     border:4px solid #ddd;
-    /* border-radius: 50%; */
     width:450px;
     height:170px;
 }
@@ -14,7 +13,7 @@
     position: relative;
     left:10rem;
     box-sizing: border-box;
-    width:75%;
+    width:85%;
    
     height:40px;
 }
@@ -64,14 +63,14 @@
     text-decoration: none;
     color: #a43d21;
     position: relative;
-    left:53rem;
-    bottom: 10px;
+    left:50rem;
+    bottom: 8px;
     transition:all 0.4s ease 0s;
 }
 .arrowl{
 position:absolute;
-top:39.8rem;
-left:88rem;
+top:40.5rem;
+left:82rem;
 
 }
 .arrowl:hover{
@@ -79,8 +78,8 @@ left:88rem;
 }
 .arrowr{
     position:absolute;
-    top:39.8rem;
-    left:90rem;
+    top:40.5rem;
+    left:85rem;
 }
 
 .arrowr:hover{
@@ -88,14 +87,14 @@ left:88rem;
 }
 .Multi-Carousel{
     box-sizing: border-box;
-    width: 100%;
+    width: auto;
     height:350px;
     background-color: #f9f9f9;
-    margin-left: 5rem;
+    margin-left: 0rem;
     margin-top: 30px;
 }
 .MultiCarousel{
-width:75%;
+width:85%;
 height:300px;
 background-color: #fff;
 margin-left: 10rem;

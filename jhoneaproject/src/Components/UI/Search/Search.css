@@ -1,19 +1,19 @@
 .Search {
   display: flex;
   flex-flow: row;
-  float: right;
+  /* float: right; */
   margin-top: 3.5rem;
 
   position: relative;
-  left: 800px;
-  margin-right: 1rem;
+  left: 8rem;
+  /* margin-right: 1rem; */
 
   height: 44px;
   line-height: 44px;
   border: none;
-  max-width: 100%;
-  position: absolute;
-  top: 0px;
+  /* max-width: 100%; */
+ 
+  bottom: 2.5rem;
 }
 
 .Search input {

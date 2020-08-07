@@ -25,3 +25,7 @@ export const AUTH_SIGNUP="SIGNUP";
 export const AUTH_LOGOUT="LOGOUT";
 export const AUTH_SIGNIN="SIGNIN";
 export const AUTH_OTP="OTP";
+
+export const UPDATE_PROFILE_START="UPDATE_START";
+export const UPDATE_PROFILE_SUCCESS="UPDATE_SUCCESS";
+export const UPDATE_PROFILE_FAIL="UPDATE_FAIL";

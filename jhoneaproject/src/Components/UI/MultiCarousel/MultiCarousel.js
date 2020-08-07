@@ -27,7 +27,7 @@ export default class MyCarousel extends Component {
       clickToChange
     
       arrowLeft={<i className="fas fa-chevron-left arrowl" name="arrow-left"></i>}
-      arrowRight={<i className="fas fa-chevron-right arrowr" name="arrow-left"></i>}
+      arrowRight={<i className="fas fa-chevron-right arrowr" name="arrow-right"></i>}
       addArrowClickHandler
       infinite>
         {this.props.happening}

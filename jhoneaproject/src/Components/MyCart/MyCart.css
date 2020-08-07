@@ -23,7 +23,7 @@
   height:auto;
   top: 7rem;
   text-align: center;
-  left: 10rem;
+  left: 9rem;
   padding: 10px 15px;
 
   /* border-bottom:2px solid black; */
@@ -41,18 +41,21 @@
 .Cartitems{
   display: grid;
   grid-template-columns: 200px 600px 200px 150px 250px;
-
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px 8px #888888;
+  margin:1rem;
   background-color: #fff;
-  width: 95.35%;
+  width: 96.35%;
 
 
   
 }
 .products-position{
-  right:1.5rem;
+  right:3rem;
   position: relative;
   height:50rem;
-  top:13rem;
+  top:7rem;
   overflow-x:hidden;
   overflow-y:auto;
   
@@ -63,7 +66,7 @@ text-decoration: none;
 }
 .checkout {
  position: relative;
- left: 85rem;
+ left: 80rem;
  bottom: 47rem;
  height: 40px;
   line-height: 40px;

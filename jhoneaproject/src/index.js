@@ -6,7 +6,8 @@ import thunk from "redux-thunk";
 import ProductDetailReducer from "./store/reducers/ProductDetailReducer";
 import SearchReducer from "./store/reducers/SearchReducer";
 import HomeReducer from './store/reducers/HomeDetailReducer';
-import CartReducer from './store/reducers/cartReducer'
+import CartReducer from './store/reducers/cartReducer';
+import ProfileReducer from './store/reducers/ProfileReducer'
 import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import ReactDOM from "react-dom";
 import "./index.css";
@@ -16,13 +17,15 @@ import registerServiceWorker from "./registerServiceWorker";
 import {persistStore,persistReducer} from 'redux-persist';
 import authReducer from './store/reducers/AuthReducer'
 import storage from 'redux-persist/lib/storage'
+
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const RootReducers = combineReducers({
   product: ProductDetailReducer,
   search:SearchReducer,
   home:HomeReducer,
   cart:CartReducer,
-  auth:authReducer
+  auth:authReducer,
+  profile:ProfileReducer
 });
 const persistConfig={
   key:'cart',

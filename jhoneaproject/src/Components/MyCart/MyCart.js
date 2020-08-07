@@ -102,13 +102,13 @@ class myCart extends Component {
         <div className="mycart-data">
           <BreadCrumb addrs="My Cart" />
 
-          <div className="data-headers ">
+          {/* <div className="data-headers ">
             <h6>Image</h6>
             <h6>Product</h6>
             <h6>Price</h6>
             <h6>Quantity</h6>
             <h6>Delete</h6>
-          </div>
+          </div> */}
           <div className="products-position">{products}</div>
     
           <Link to="/checkout" className="checkout">Checkout</Link>

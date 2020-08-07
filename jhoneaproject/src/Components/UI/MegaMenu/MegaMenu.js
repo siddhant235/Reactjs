@@ -4,7 +4,7 @@ import {NavLink} from 'react-router-dom';
 const MegaMenu = () => {
   return (
     <React.Fragment>
-      <div className="MegaMenu row container-fluid">
+      <div className="MegaMenu">
         <div className="Menus">
           {/* <a href="#default" > <img src={Logos} alt="Jhonea-logo" /></a> */}
 

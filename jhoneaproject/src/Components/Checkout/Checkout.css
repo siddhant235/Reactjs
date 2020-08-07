@@ -7,7 +7,7 @@
 .Your-Address{
     position: relative;
     top:9rem;
-    left:13.5rem;
+    left:8.5rem;
 
 }
 .addrs-card
@@ -52,9 +52,9 @@ left:12rem;
 {
     position: relative;
     background-color: #fff;
-    width:35%;
+    width:40%;
     height:auto;
-    left:65rem;
+    left:54rem;
     bottom:10rem;
     padding: 20px 25px;
 }
