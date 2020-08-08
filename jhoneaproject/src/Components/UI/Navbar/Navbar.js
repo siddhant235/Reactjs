@@ -6,7 +6,7 @@ import SignUp from '../../Authentication/SignUp/Signup'
 import user from '../../../assets/images/user-icon.png'
 import   './Navbar.css'
 import customerCare from '../../../assets/images/customer-care-icon.png'
-import { Redirect } from 'react-router-dom';
+import { Redirect,NavLink} from 'react-router-dom';
 class Navbar extends Component{
     state={
         showLogin:false,
@@ -83,7 +83,7 @@ class Navbar extends Component{
            
             </span>
            
-            <a href="#default"><i className="far fa-heart"></i>Wishlist</a>
+            <NavLink to="/wishlist"><i className="far fa-heart"></i>Wishlist</NavLink>
             <a href="#default"><i className="far fa-bell"></i></a>
             <div className="icons">
             <a href="/checkout">Checkout</a>

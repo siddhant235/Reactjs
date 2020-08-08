@@ -41,6 +41,7 @@
       border-bottom: 3px solid #bb732e;
       
   }
+
   .profileMenu p:hover{
       cursor: pointer;
       color: #bb732e;
@@ -92,4 +93,151 @@
     background-color: #bb732e;
     transition: all 0.4s ease-in-out;
    
+  }
+
+  .Your-Address{
+    position: relative;
+    top:0rem;
+    left:3.5rem;
+
+}
+.addrs-card
+{
+    background-color: #f9f9f9;
+    width: 40%;
+    border: 1px solid #999;
+}
+/* .addrs-content input {
+    font-size:200px;
+} */
+.addrs-content{
+    padding:10px 15px;
+    font-weight: 600;
+}
+.addrs-content p{
+    cursor:pointer;
+    color:#bb732e;
+    margin:0px 2rem;
+}
+.Your-Address hr{
+    position: relative;
+    width:40%;
+    top:0rem;
+    left:1rem;
+    bottom: 3rem;
+    right:32rem;
+   
+}
+.checkmark {
+    position: absolute;
+    top: 4.3rem;
+    left: 1.2rem;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+  /* On mouse-over, add a grey background color */
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  /* When the radio button is checked, add a blue background */
+  .container input:checked ~ .checkmark {
+    background-color: #bb732e;
+  }
+  
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  /* Show the indicator (dot/circle) when checked */
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  /* Style the indicator (dot/circle) */
+  .container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+  }
+
+
+  /* -----------settings---------------------- */
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .Settings-Update
+  {
+      display: grid;
+      margin-top: 1rem;
+      margin-left:5rem;
+      justify-self: start;
+      grid-template-columns: 700px 500px;
   }

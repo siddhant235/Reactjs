@@ -124,7 +124,7 @@ input[type="number"] {
     padding-right:0.3rem;
     font-size: 20px;
 }
-.wish a{
+.wish p{
     font-size: 20px;
     text-decoration: none;
     color:black;
@@ -133,8 +133,9 @@ input[type="number"] {
 
 animation: wish 0.4s linear forwards;
 }
-.wish a:hover{
+.wish p:hover{
     color:#bb732e;
+    cursor: pointer;
 }
 .description{
   position: absolute;

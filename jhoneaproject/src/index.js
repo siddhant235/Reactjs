@@ -7,6 +7,7 @@ import ProductDetailReducer from "./store/reducers/ProductDetailReducer";
 import SearchReducer from "./store/reducers/SearchReducer";
 import HomeReducer from './store/reducers/HomeDetailReducer';
 import CartReducer from './store/reducers/cartReducer';
+import FavouriteReducer from './store/reducers/Wishlist'
 import ProfileReducer from './store/reducers/ProfileReducer'
 import { createStore, applyMiddleware, compose, combineReducers } from "redux";
 import ReactDOM from "react-dom";
@@ -25,7 +26,8 @@ const RootReducers = combineReducers({
   home:HomeReducer,
   cart:CartReducer,
   auth:authReducer,
-  profile:ProfileReducer
+  profile:ProfileReducer,
+  fav:FavouriteReducer
 });
 const persistConfig={
   key:'cart',

@@ -7,6 +7,7 @@ import Review from "../../Components/UI/Reviews/Reviews";
 import { connect } from "react-redux";
 import * as actionCreator from '../../store/actions/productDetails'
 import * as Cartaction from '../../store/actions/Cart'
+import * as favaction from '../../store/actions/Wishlist'
 import Crumb from "../../Components/UI/BreadCrumb/BreadCrumb";
 import { NavLink } from "react-router-dom";
 import Delieveryimg from "../../assets/images/delivery_icon.png";
@@ -33,6 +34,17 @@ class productDetail extends Component {
     
   }
   this.handleinput=this.handleinput.bind(this)
+  this.addfavoutite=this.addfavoutite.bind(this)
+}
+addfavoutite=()=>{
+let data=[{
+  loginuserID: localStorage.getItem('userID'),
+productID:this.props.match.params.id,
+languageID: "1",
+apiType: "Android",
+apiVersion: "1.0"
+}] 
+this.props.onAddFavourite(data)
 }
   
   componentDidMount() {
@@ -206,9 +218,9 @@ addSuccessfull:true
         
           </span>
           <span className="wish">
-            <a href="/product" data-tip="Add to Wishlist">
+            <p  onClick={this.addfavoutite} data-tip="Add to Wishlist">
               <i className="far fa-heart"></i> Add to Wishlist
-            </a>
+            </p>
           </span>
           <span className="description">
             <hr />
@@ -372,7 +384,8 @@ const mapDispatchToProps=(dispatch)=>{
   return{
     onGetproductDetails:()=>dispatch(actionCreator.getproductdetails()),
     onGetSimilarProducts:()=>dispatch(actionCreator.getSimilarProductdetails()),
-    onSendALLProducts:(products,total)=>dispatch(Cartaction.additems(products,total))
+    onSendALLProducts:(products,total)=>dispatch(Cartaction.additems(products,total)),
+    onAddFavourite:(addfavourite)=>dispatch(favaction.addfavourite(addfavourite))
   }
 }
 export default connect(mapStateToProps,mapDispatchToProps)(productDetail);
