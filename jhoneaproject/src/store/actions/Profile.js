@@ -62,6 +62,36 @@ export const settingsUpdate=(settingdata)=>{
     })
       .then((response) => response.json())
       .then((res) => {
+      console.log(res)
+      localStorage.setItem('userData',JSON.stringify(res[0].data[0]))
+          
+      })
+      .catch((err) => {
+        console.log(err)
+      });
+      
+  }
+}
+
+
+export const addAddress=(addressData)=>{
+  return dispatch=>{
+
+   
+    var URL =
+      "http://13.235.251.42/grocery/backend/web/index.php/v1/useraddress/add-delivery-address";
+
+    fetch(URL, {
+      method: "POST",
+      headers: new Headers({
+        "Content-Type": "application/x-www-form-urlencoded", // <-- Specifying the Content-Type
+      }),
+      body:
+        "json=" +
+        JSON.stringify(addressData),
+    })
+      .then((response) => response.json())
+      .then((res) => {
         console.log(res);
           
       })
@@ -71,3 +101,31 @@ export const settingsUpdate=(settingdata)=>{
       
   }
 }
+export const removeAddress=(removeaddressData)=>{
+  return dispatch=>{
+
+   
+    var URL =
+      "http://13.235.251.42/grocery/backend/web/index.php/v1/useraddress/delete-delivery-address";
+
+    fetch(URL, {
+      method: "POST",
+      headers: new Headers({
+        "Content-Type": "application/x-www-form-urlencoded", // <-- Specifying the Content-Type
+      }),
+      body:
+        "json=" +
+        JSON.stringify(removeaddressData),
+    })
+      .then((response) => response.json())
+      .then((res) => {
+        console.log(res);
+          
+      })
+      .catch((err) => {
+        console.log(err)
+      });
+      
+  }
+}
+

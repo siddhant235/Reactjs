@@ -2,8 +2,10 @@ import * as actionTypes from '../actions/actionTypes';
 import {updateObject} from '../utility'
 
 const initialState={
+    data:[],
 loading:false,
 message:'',
+favstatus:false,
 error:''
 }
 const addfavoutite=(state,action)=>{
@@ -13,7 +15,7 @@ const removefavoutite=(state,action)=>{
     return updateObject(state,{loading:true})
 }
 const getfavoutite=(state,action)=>{
-    return updateObject(state,{loading:true})
+    return updateObject(state,{loading:false,data:action.data,favstatus:action.favstatus})
 }
 const favourite=(state=initialState,action)=>{
     switch(action.type)

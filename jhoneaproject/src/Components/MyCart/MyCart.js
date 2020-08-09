@@ -44,7 +44,7 @@ class myCart extends Component {
     this.state.added=false
     
   }
-    let products = this.props.cartDetails.map((item) => {
+    let cartproducts = this.props.cartDetails.map((item) => {
       return (
         <div key={item.productID} className="Cartitems">
           <img
@@ -109,7 +109,7 @@ class myCart extends Component {
             <h6>Quantity</h6>
             <h6>Delete</h6>
           </div> */}
-          <div className="products-position">{products}</div>
+          <div className="products-position">{cartproducts}</div>
     
           <Link to="/checkout" className="checkout">Checkout</Link>
     

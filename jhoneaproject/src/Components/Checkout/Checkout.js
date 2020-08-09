@@ -9,8 +9,32 @@ import Footer from "../UI/Footer/Footer";
 class checkout extends Component {
   
   render() {
-    let addrs=JSON.parse(localStorage.getItem('userData'))
-    addrs=addrs.addressAddressLine1;
+    let addrs = JSON.parse(localStorage.getItem("userData"));
+    console.log(addrs.userdeliveryaddress);
+    addrs = addrs.userdeliveryaddress.map((item) => (
+     
+      <div className="addrs-card">
+      
+      
+          <label className="container">
+              <input type="checkbox" />
+            <span className="checkmark"></span>
+           </label>
+           <div className="addrs-content">
+           {item.addressTitle}
+           <p style={{ color: "#666" }}>
+              {/* B-4, Shivalik Business Center, Opp. Kensville Golf Academy,
+          B/H. Rajpath Club Off. s.G.Highway, Ahmedabad, Gujrat 380054 */}
+           {item.addressAddressLine1}
+
+                         </p>
+          
+          {/* <p className="fas fa-edit">Edit</p> */}
+          {/* <p className="fas fa-trash" onClick={()=>this.removeAddress(item.addressID)}>Delete</p> */}
+        </div>
+    
+      </div>
+    ));
   let total=0;
     for(let i=0;i<this.props.products.length;i++)
     {
@@ -40,22 +64,22 @@ class checkout extends Component {
           <section className="Your-Address">
             <h4>DELIVERY LOCATION</h4>
             <hr />
-            <div className="addrs-card">
+            {/* <div className="addrs-card">
               <div className="addrs-content">
                 <label className="container">
                   <input type="radio" name="radio" />
                   Home
                   <span className="checkmark"></span>
-                  <p style={{color:"#666"}}>
+                  <p style={{color:"#666"}}> */}
                     {/* B-4, Shivalik Business Center, Opp. Kensville Golf Academy,
                     B/H. Rajpath Club Off. s.G.Highway, Ahmedabad, Gujrat 380054 */}
                    {addrs}
-                  </p>
+                  {/* </p>
                 </label>
                 <p className="fas fa-edit">Edit</p>
                 <p className="fas fa-trash">Delete</p>
               </div>
-            </div>
+            </div> */}
           </section>
            <div className="YourOrder-content">
          

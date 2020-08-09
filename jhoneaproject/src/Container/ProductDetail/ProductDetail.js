@@ -24,7 +24,7 @@ class productDetail extends Component {
     reviews: false,
     prods:[{
     name:'hi',
-    quantity:0,
+    quantity:1,
     image:'by',
     price:'pi',
     productID:'0'}],
@@ -208,7 +208,7 @@ addSuccessfull:true
               </p>
             </section>
            
-            <input type="number" min="0" defaultValue="0"  name="quantity" onChange={this.handleinput} />
+            <input type="number" min="0" defaultValue="0"  name="quantity" onChange={this.handleinput}  />
             <NavLink to="/checkout" exact className="checkout-button">
               Buy Now
             </NavLink>
@@ -218,7 +218,7 @@ addSuccessfull:true
         
           </span>
           <span className="wish">
-            <p  onClick={this.addfavoutite} data-tip="Add to Wishlist">
+            <p className="addtoWish" onClick={this.addfavoutite} data-tip="Add to Wishlist">
               <i className="far fa-heart"></i> Add to Wishlist
             </p>
           </span>

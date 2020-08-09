@@ -1,4 +1,11 @@
-
+import * as actionTypes from './actionTypes'
+export const getfav=(data,favstatus)=>
+{return{
+  type:actionTypes.GET_FAVOURITE,
+  data:data,
+  favstatus:favstatus
+}
+}
 export const addfavourite=(favouritedata)=>{
     return dispatch=>{
 
@@ -73,6 +80,7 @@ export const favouritelist=(getfavouritedata)=>{
           .then((response) => response.json())
           .then((res) => {
             console.log(res);
+            dispatch(getfav(res[0].data,res[0].status))
               
           })
           .catch((err) => {

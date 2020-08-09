@@ -14,7 +14,7 @@
     position: relative;
     left:10rem;
     box-sizing: border-box;
-    width:80%;
+    width:85%;
    
     height:40px;
 }
@@ -70,8 +70,8 @@
 }
 .arrowl1{
 position:absolute;
-top:94.2rem;
-left:90rem;
+top:95.5rem;
+left:86rem;
 
 }
 .arrowl1:hover{
@@ -79,8 +79,8 @@ left:90rem;
 }
 .arrowr1{
     position:absolute;
-    top:94.2rem;
-    left:92rem;
+    top:95.5rem;
+    left:88rem;
 }
 
 .arrowr1:hover{
@@ -95,7 +95,7 @@ left:90rem;
     margin-top: 30px;
 }
 .MultiCarouselsimilar{
-width:80%;
+width:85%;
 height:500px;
 margin-bottom: 5rem;
 background-color: #fff;

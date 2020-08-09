@@ -47,9 +47,9 @@ const MegaMenu = () => {
               </li>
               <div className="dropdown-contentb">
                 <NavLink to="/myprofile">My Profile</NavLink>
-                <a href="#default">My Wishlist</a>
+                <NavLink to="/wishlist">My Wishlist</NavLink>
                 <a href="#default">My Orders</a>
-                <a href="#default">Settings</a>
+              
               </div>
             </div>
             <div className="dropdownsc">

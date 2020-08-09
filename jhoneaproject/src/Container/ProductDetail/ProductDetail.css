@@ -244,6 +244,10 @@ right:20rem;
   animation: added 2s linear forwards;
 
 }
+.addtoWish:active{
+  transform: scale(0.8);
+  transition: all 0.3s ease-out;
+}
 @keyframes added{
   0%{
    opacity: 1;

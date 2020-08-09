@@ -10,6 +10,7 @@ const Signup=React.lazy(()=>import('../../Components/Authentication/SignUp/Signu
 const MyCart=React.lazy(()=>import('../../Components/MyCart/MyCart'))
 const MyProfile =React.lazy(()=>import('../../Components/Profile/Profile'))
 const Wishlist=React.lazy(()=>import('../../Components/Wishlist/Wishlist'))
+const Notification=React.lazy(()=>import('../../Components/Notifications/Notification'))
 class App extends Component {
   
   
@@ -29,6 +30,7 @@ class App extends Component {
           <Route path="/checkout/" exact component={Checkout}/>
           <Route path="/myprofile/" exact component={MyProfile}/>
           <Route path="/wishlist/" exact component={Wishlist}/>
+          <Route path="/notifications/" exact component={Notification}/>
           <Route Path="/user/mycart/" exact component={MyCart}/>
          
           

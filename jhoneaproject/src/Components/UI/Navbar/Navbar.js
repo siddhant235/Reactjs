@@ -44,6 +44,7 @@ class Navbar extends Component{
         })
     }
     render(){
+        const id=localStorage.getItem('userID')
    const loginres=localStorage.getItem('otpRes')
    let userData=''
    let Username=''
@@ -83,10 +84,11 @@ class Navbar extends Component{
            
             </span>
            
-            <NavLink to="/wishlist"><i className="far fa-heart"></i>Wishlist</NavLink>
-            <a href="#default"><i className="far fa-bell"></i></a>
+          {id?<NavLink to="/wishlist"><i className="far fa-heart"></i>Wishlist</NavLink>:<p onClick={this.slogin} show="true" style={{color:'white',cursor:'pointer'}}><i className="far fa-heart"></i>Wishlist</p>}
+            <NavLink to="/notifications"><i className="far fa-bell"></i></NavLink>
             <div className="icons">
-            <a href="/checkout">Checkout</a>
+          {/* {id?<a href="/checkout">Checkout</a>} */}
+          {id?<NavLink to="/checkout">Checkout</NavLink>:<p onClick={this.slogin} show="true" style={{color:'white',cursor:'pointer'}}>Checkout</p>}
             </div>
            
         </div>
