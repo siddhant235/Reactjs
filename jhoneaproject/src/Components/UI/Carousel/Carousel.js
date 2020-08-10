@@ -21,7 +21,7 @@ function ControlledCarousel(props) {
            width="1500px"
            height="411px"
             alt="Card Cap"
-            src={`http://13.235.251.42/grocery/backend/web/uploads/banners/${ban.bannerImage}`}
+            src={`/web/uploads/banners/${ban.bannerImage}`}
             effect="blur"
             delayMethod="debounce"
             threshold={100}

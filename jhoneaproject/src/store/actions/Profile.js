@@ -20,7 +20,7 @@ export const profielupdate = (userprofile) => {
   return (dispatch) => {
     dispatch(updatestart());
     var URL =
-      "http://13.235.251.42/grocery/backend/web/index.php/v1/users/user-update-profile";
+      "/web/index.php/v1/users/user-update-profile";
 
     fetch(URL, {
       method: "POST",
@@ -49,7 +49,7 @@ export const settingsUpdate=(settingdata)=>{
 
    
     var URL =
-      "http://13.235.251.42/grocery/backend/web/index.php/v1/users/user-update-settings";
+      "/web/index.php/v1/users/user-update-settings";
 
     fetch(URL, {
       method: "POST",
@@ -79,7 +79,7 @@ export const addAddress=(addressData)=>{
 
    
     var URL =
-      "http://13.235.251.42/grocery/backend/web/index.php/v1/useraddress/add-delivery-address";
+      "/web/index.php/v1/useraddress/add-delivery-address";
 
     fetch(URL, {
       method: "POST",
@@ -106,7 +106,7 @@ export const removeAddress=(removeaddressData)=>{
 
    
     var URL =
-      "http://13.235.251.42/grocery/backend/web/index.php/v1/useraddress/delete-delivery-address";
+      "/web/index.php/v1/useraddress/delete-delivery-address";
 
     fetch(URL, {
       method: "POST",

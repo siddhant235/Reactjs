@@ -48,7 +48,7 @@ class myCart extends Component {
       return (
         <div key={item.productID} className="Cartitems">
           <img
-            src={`http://13.235.251.42/grocery/backend/web/uploads/products/${item.image}`}
+            src={`/web/uploads/products/${item.image}`}
             alt="product"
             style={{
               width: "150px",

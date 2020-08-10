@@ -85,10 +85,11 @@ class checkout extends Component {
          
           <section className="Your-Orders">
           <hr style={{
-            position:"relative",
+            position:"absolute",
             left:"0rem",
             width:"100%"
           }}/>
+          <span>
             <h3>Your Order  </h3>
             
            <div className="order-detail">
@@ -127,6 +128,7 @@ class checkout extends Component {
               
          
           </div>
+          </span>
           </section>
         
           </div>

@@ -11,7 +11,7 @@ export const addfavourite=(favouritedata)=>{
 
    
         var URL =
-          "http://13.235.251.42/grocery/backend/web/index.php/v1/userfavouriteproduct/add-product-favourite";
+          "/web/index.php/v1/userfavouriteproduct/add-product-favourite";
     
         fetch(URL, {
           method: "POST",
@@ -39,7 +39,7 @@ export const removefavourite=(removefavouritedata)=>{
 
    
         var URL =
-          "http://13.235.251.42/grocery/backend/web/index.php/v1/userfavouriteproduct/remove-product-favourite";
+          "/web/index.php/v1/userfavouriteproduct/remove-product-favourite";
     
         fetch(URL, {
           method: "POST",
@@ -66,7 +66,7 @@ export const favouritelist=(getfavouritedata)=>{
 
    
         var URL =
-          "http://13.235.251.42/grocery/backend/web/index.php/v1/userfavouriteproduct/product-favourite-list";
+          "/web/index.php/v1/userfavouriteproduct/product-favourite-list";
     
         fetch(URL, {
           method: "POST",

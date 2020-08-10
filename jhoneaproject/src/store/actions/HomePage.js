@@ -42,7 +42,7 @@ export const gethomedetails = () => {
     dispatch(gethomeDetailsStart());
 
     var URL =
-      "http://13.235.251.42/grocery/backend/web/index.php/v1/users/user-home";
+      "/web/index.php/v1/users/user-home";
 
     fetch(URL, {
       method: "POST",
@@ -75,7 +75,7 @@ export const gethomedetails = () => {
 export const getcountrydetails = () => {
   return (dispatch) => {
     var URL =
-      "http://13.235.251.42/grocery/backend/web/index.php/v1/country/get-country-list";
+      "/web/index.php/v1/country/get-country-list";
 
     fetch(URL, {
       method: "POST",
@@ -103,7 +103,7 @@ export const getcountrydetails = () => {
 export const getstatedetails = () => {
   return (dispatch) => {
     var URL =
-      "http://13.235.251.42/grocery/backend/web/index.php/v1/state/get-state-list";
+      "/web/index.php/v1/state/get-state-list";
 
     fetch(URL, {
       method: "POST",
@@ -131,7 +131,7 @@ export const getstatedetails = () => {
 export const getcitydetails = () => {
   return (dispatch) => {
     var URL =
-      "http://13.235.251.42/grocery/backend/web/index.php/v1/city/get-city-list";
+      "/web/index.php/v1/city/get-city-list";
 
     fetch(URL, {
       method: "POST",

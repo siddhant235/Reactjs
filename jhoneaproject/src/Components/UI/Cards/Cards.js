@@ -15,7 +15,7 @@ class Cards extends Component {
         return (
           <div key={product.productID}>
             <Card
-              image={`http://13.235.251.42/grocery/backend/web/uploads/products/${product.productImage}`}
+              image={`/web/uploads/products/${product.productImage}`}
               title={product.productStock}
               text={product.productName}
               link={product.link}

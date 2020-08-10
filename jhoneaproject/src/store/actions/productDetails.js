@@ -40,7 +40,7 @@ export const getproductdetails = () => {
     dispatch(getProductDetailsStart());
 
     var URL =
-      "http://13.235.251.42/grocery/backend/web/index.php/v1/product/get-product-list";
+      "/web/index.php/v1/product/get-product-list";
 
     fetch(URL, {
       method: "POST",
@@ -82,7 +82,7 @@ export const getSimilarProductdetails = () => {
     dispatch(getsimilarDetailsStart());
 
     var URL =
-      "http://13.235.251.42/grocery/backend/web/index.php/v1/product/get-similar-product-list";
+      "/web/index.php/v1/product/get-similar-product-list";
 
     fetch(URL, {
       method: "POST",

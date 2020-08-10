@@ -21,7 +21,7 @@ const MegaMenu = () => {
               </li>
 
               <div className="dropdown-contenta">
-                <a href="#default">Buttons</a>
+                {/* <a href="#default">Buttons</a>
                 <a href="#default">Zipper</a>
                 <a href="#default">Thread</a>
                 <a href="#default">Cufflinks</a>
@@ -32,7 +32,7 @@ const MegaMenu = () => {
                 <a href="#default">Buckles</a>
                 <a href="#default">Button</a>
                 <a href="#default">Thread</a>
-                <a href="#default">Cufflinks</a>
+                <a href="#default">Cufflinks</a> */}
               </div>
             </div>
             <li>

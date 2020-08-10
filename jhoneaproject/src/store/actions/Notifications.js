@@ -10,7 +10,7 @@ export const getNotifcations=(notificationdata)=>{
 
                 
         var URL =
-          "http://13.235.251.42/grocery/backend/web/index.php/v1/notification/get-notification-list";
+          "/web/index.php/v1/notification/get-notification-list";
     
         fetch(URL, {
           method: "POST",
@@ -39,7 +39,7 @@ export const removeNotifications=(removeNotification)=>{
 
    
         var URL =
-          "http://13.235.251.42/grocery/backend/web/index.php/v1/userfavouriteproduct/remove-product-favourite";
+          "/web/index.php/v1/userfavouriteproduct/remove-product-favourite";
     
         fetch(URL, {
           method: "POST",

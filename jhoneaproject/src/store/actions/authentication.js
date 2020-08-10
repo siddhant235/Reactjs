@@ -30,7 +30,7 @@ export const Logout = () => {
 export const signup = (UserDetails) => {
   return (dispatch) => {
     var URL =
-      "http://13.235.251.42/grocery/backend/web/index.php/v1/users/user-signup";
+      "/web/index.php/v1/users/user-signup";
 
     fetch(URL, {
       method: "POST",
@@ -54,7 +54,7 @@ export const signup = (UserDetails) => {
 export const login = (userData) => {
   return (dispatch) => {
     var URL =
-      "http://13.235.251.42/grocery/backend/web/index.php/v1/users/user-login";
+      "/web/index.php/v1/users/user-login";
     fetch(URL, {
       method: "POST",
       headers: new Headers({
@@ -84,7 +84,7 @@ export const logout = () => {
 export const otp = (newotp) => {
   return (dispatch) => {
     var URL =
-      "http://13.235.251.42/grocery/backend/web/index.php/v1/users/otp-verification/";
+      "/web/index.php/v1/users/otp-verification/";
     fetch(URL, {
       method: "POST",
       headers: new Headers({
@@ -110,7 +110,7 @@ export const otp = (newotp) => {
 export  const otpResend=(resendData)=>{
   return dispatch=>{
     var URL =
-    "http://13.235.251.42/grocery/backend/web/index.php/v1/users/otp-resend/";
+    "/web/index.php/v1/users/otp-resend/";
   fetch(URL, {
     method: "POST",
     headers: new Headers({

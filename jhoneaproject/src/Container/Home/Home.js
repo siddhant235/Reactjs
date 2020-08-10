@@ -28,7 +28,7 @@ class Home extends Component {
           <span className="individual" key={cat.categoryID}>
             <NavLink to="/category-list">
               <img
-                src={`http://13.235.251.42/grocery/backend/web/uploads/category/${cat.categoryImage}`}
+                src={`/web/uploads/category/${cat.categoryImage}`}
                 alt="images"
               />
               <br />

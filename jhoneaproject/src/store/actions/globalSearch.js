@@ -22,7 +22,7 @@ export const getsearchdetails = () => {
     dispatch(getSearchDetailsStart());
 
     var URL =
-      "http://13.235.251.42/grocery/backend/web/index.php/v1/product/global-search";
+      "/web/index.php/v1/product/global-search";
 
     fetch(URL, {
       method: "POST",
